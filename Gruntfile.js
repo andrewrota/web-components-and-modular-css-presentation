@@ -2,7 +2,7 @@ module.exports = function(grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
         jshint: {
-            all: ['script.js', 'Gruntfile.js'],
+            all: ['assets/script.js', 'Gruntfile.js'],
             options: {
                 jshintrc: true
             }
@@ -10,8 +10,8 @@ module.exports = function(grunt) {
         sass: {
             dist: {
                 files: [{
-                    src: ['style.scss'],
-                    dest: 'style.css'
+                    src: ['assets/style.scss'],
+                    dest: 'assets/style.css'
                 }]
             }
         }
