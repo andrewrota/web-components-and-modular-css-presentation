@@ -1,0 +1,21 @@
+{
+  "name": "web-components-and-modular-css-presentation",
+  "version": "0.1.0",
+  "homepage": "https://github.com/andrewrota/web-components-and-modular-css-presentation",
+  "authors": [
+    "Andrew Rota <rota.andrew@gmail.com>"
+  ],
+  "description": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "dist"
+  ],
+  "private": true,
+  "dependencies": {
+    "warpech-prism": "git@github.com:andrewrota/warpech-prism.git#master",
+    "web-component-slides": "git@github.com:andrewrota/web-component-slides.git#master"
+  }
+}
