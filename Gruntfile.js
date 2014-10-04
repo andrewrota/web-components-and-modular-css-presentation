@@ -14,11 +14,18 @@ module.exports = function(grunt) {
                     dest: 'assets/style.css'
                 }]
             }
+        },
+        watch: {
+            scss: {
+                files: 'assets/*.scss',
+                tasks: ['sass']
+            }
         }
     });
-    
+
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-sass');
+    grunt.loadNpmTasks('grunt-contrib-watch')
 
     grunt.registerTask('default', ['jshint', 'sass']);
 };
