@@ -1,7 +1,43 @@
+//font-family: 'Swanky and Moo Moo', cursive;
+//font-family: 'Francois One', sans-serif;
+//font-family: 'Roboto Condensed', sans-serif;
+
+/* Color palette inspired by designjunkee's Ocean Five
+ * <http://www.colourlovers.com/palette/1473/Ocean_Five>
+ * CC-BY-NC-SA
+ */
+$primary: #00A0B0; // blue
+$secondary: #CC333F; // red
+$tertiary: #EB6841; // orange
+$quaternary: #6A4A3C; // brown
+$quinary: #EDC951; // yellow
+
+$standardDark: #333333; // dark gray
+$standardLight: #eeeeee; // off white
+
 body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-size: 125%;
+    font-size: 185%;
     line-height: 1.2;
+    color: $standardDark;
+}
+a {
+    color: $standardLight;
+}
+a:hover, a:active {
+    background-color: lighten($tertiary, 10%);
+}
+blockquote {
+    font-family: 'Swanky and Moo Moo', cursive;
+    font-size: 200%;
+    border-left-width: 10px;
+    border-left-style: solid;
+    border-left-color: $quinary;
+    padding-left: 20px;
+    .attr {
+        font-family: Arial, sans-serif;
+        font-size: 60%;
+    }
 }
 code-prism {
     font-size: 150%;
@@ -15,17 +51,70 @@ code-prism /deep/ pre {
     margin: 0 auto;
     width: 100%;
 }
+h1 {
+    color: $secondary;
+    font-size: 225%;
+    font-family: 'Ubuntu', Helvetica, Arial, sans-serif, sans-serif;
+    text-shadow: 2px 5px 10px rgba(255, 255, 255, 0.2);
+}
+ul {
+    list-style-type: circle;
+    margin-left: 25px;
+}
+li {
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+h2 {
+    color: $standardDark;
+    margin-left: 20px;
+}
 .attr small {
     font-size: 50%;
     display: block;
 }
-slide-content .title-block {
-    margin-top: 40vh;
-    text-align: center;
+
+slide-content {
+    background: $primary;
+    box-sizing: border-box;
+    padding-left: 25px;
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    .title-block {
+        margin-top: 40vh;
+        text-align: center;
+    }
+}
+slide-show {
+    /deep/ .progress-bar {
+        background-color: $quinary;
+        /* Animation technique from Reveal.js <https://github.com/hakimel/reveal.js> */
+        transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
+    }
+    /deep/ .next, {
+        border-left-color: $quaternary;
+    }
+    /deep/ .prev, {
+        border-right-color: $quaternary;
+        z-index: 2;
+    }
 }
 @media print {
-  slide-content { 
-      display: block;
-      page-break-after: always;
-  }
+    body {
+        background: $primary;
+    }
+    slide-show /deep/ .progress-bar {
+        display: none;
+    }
+    slide-content { 
+        display: block;
+        page-break-after: always;
+        height: inherit;
+        width: inherit;
+        position: static;
+    }
 }
+

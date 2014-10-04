@@ -1,7 +1,29 @@
+/* Color palette inspired by designjunkee's Ocean Five
+ * <http://www.colourlovers.com/palette/1473/Ocean_Five>
+ * CC-BY-NC-SA
+ */
 body {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-size: 125%;
-  line-height: 1.2; }
+  font-size: 185%;
+  line-height: 1.2;
+  color: #333333; }
+
+a {
+  color: #eeeeee; }
+
+a:hover, a:active {
+  background-color: #f08d6f; }
+
+blockquote {
+  font-family: 'Swanky and Moo Moo', cursive;
+  font-size: 200%;
+  border-left-width: 10px;
+  border-left-style: solid;
+  border-left-color: #edc951;
+  padding-left: 20px; }
+  blockquote .attr {
+    font-family: Arial, sans-serif;
+    font-size: 60%; }
 
 code-prism {
   font-size: 150%; }
@@ -15,15 +37,61 @@ code-prism /deep/ pre {
   margin: 0 auto;
   width: 100%; }
 
+h1 {
+  color: #cc333f;
+  font-size: 225%;
+  font-family: 'Ubuntu', Helvetica, Arial, sans-serif, sans-serif;
+  text-shadow: 2px 5px 10px rgba(255, 255, 255, 0.2); }
+
+ul {
+  list-style-type: circle;
+  margin-left: 25px; }
+
+li {
+  margin-bottom: 5px;
+  margin-top: 5px; }
+
+h2 {
+  color: #333333;
+  margin-left: 20px; }
+
 .attr small {
   font-size: 50%;
   display: block; }
 
-slide-content .title-block {
-  margin-top: 40vh;
-  text-align: center; }
+slide-content {
+  background: #00a0b0;
+  box-sizing: border-box;
+  padding-left: 25px;
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0; }
+  slide-content .title-block {
+    margin-top: 40vh;
+    text-align: center; }
+
+slide-show /deep/ .progress-bar {
+  background-color: #edc951;
+  /* Animation technique from Reveal.js <https://github.com/hakimel/reveal.js> */
+  transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985); }
+slide-show /deep/ .next {
+  border-left-color: #6a4a3c; }
+slide-show /deep/ .prev {
+  border-right-color: #6a4a3c;
+  z-index: 2; }
 
 @media print {
+  body {
+    background: #00a0b0; }
+
+  slide-show /deep/ .progress-bar {
+    display: none; }
+
   slide-content {
     display: block;
-    page-break-after: always; } }
+    page-break-after: always;
+    height: inherit;
+    width: inherit;
+    position: static; } }
