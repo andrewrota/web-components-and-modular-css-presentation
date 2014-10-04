@@ -23,3 +23,9 @@ slide-content .title-block {
     margin-top: 40vh;
     text-align: center;
 }
+@media print {
+  slide-content { 
+      display: block;
+      page-break-after: always;
+  }
+}
