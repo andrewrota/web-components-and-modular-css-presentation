@@ -3,44 +3,100 @@
 
 <head>
     <title>Web Components and Modular CSS</title>
-    <link rel="import" href="bower_components/warpech-prism/code-prism.html">
     <link rel="import" href="bower_components/web-component-slides/dist/slide-content.html">
-    <link rel="import" href="bower_components/web-component-slides/dist/slide-show.html"><link href='//fonts.googleapis.com/css?family=Swanky+and+Moo+Moo|Francois+One|Roboto+Condensed:400,700|Ubuntu:400,700' rel='stylesheet' type='text/css'>
+    <link rel="import" href="bower_components/web-component-slides/dist/slide-show.html">
+    <link rel="import" href="bower_components/warpech-prism/code-prism.html">
+    <link href='//fonts.googleapis.com/css?family=Swanky+and+Moo+Moo|Francois+One|Roboto+Condensed:400,700|Ubuntu:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="assets/style.css" type="text/css" />
 </head>
 
 <body>
     <slide-show>
-        <slide-content>
-            <div class="title-block">
-                <h1>Web Components and Modular CSS</h1>
-                <h2>Andrew Rota | CSS Dev Conf 2014</h2>
-            </div>
+        <slide-content class="title-slide">
+            <h1>Web Components and Modular CSS</h1>
+            <h2>Andrew Rota | CSS Dev Conf 2014</h2>
         </slide-content>
         <slide-content>
-            <h1>CSS Modularity Today</h1>
+            <h1>Modularity + CSS</h1>
+        </slide-content>
+        <slide-content>
+            <h1>CSS Modularity</h1>
+
         </slide-content>
         <slide-content>
             <h1>UI Libraries</h1>
-            <ul>
-                <li><a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a></li>
-                <li><a href="http://jqueryui.com/" target="_blank">jQuery UI</a></li>
-                <li>Sencha's <a href="http://www.sencha.com/products/extjs/" target="_blank">ExtJS</a></li>
-                <li>Adobe's <a href="http://topcoat.io/" target="_blank">Topcoat</a></li>
-                <li>Yahoo's <a href="http://purecss.io/" target="_blank">Pure CSS</a></li>
-            </ul>
+                <ul>
+                    <li><a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>
+                    </li>
+                    <li><a href="http://jqueryui.com/" target="_blank">jQuery UI</a>
+                    </li>
+                    <li><a href="http://foundation.zurb.com/">Zurb Foundation</a>
+                    </li>
+                    <li>Sencha's <a href="http://www.sencha.com/products/extjs/" target="_blank">ExtJS</a>
+                    </li>
+                    <li>Adobe's <a href="http://topcoat.io/" target="_blank">Topcoat</a>
+                    </li>
+                    <li>Yahoo's <a href="http://purecss.io/" target="_blank">Pure CSS</a>
+                    </li>
+                </ul>
+        </slide-content>
+        <slide-content>
+            <h1>UI Libraries</h1>
+            
+        </slide-content>
+        <slide-content>
+            <img src="http://media.giphy.com/media/n7Kv7tLf2UzMk/giphy.gif" alt="Sad" class="gif" data-reset>
         </slide-content>
         <slide-content>
             <h1>Modular CSS Patterns</h1>
             <ul>
-                <li><a href="https://bem.info/" target="_blank">BEM</a></li>
-                <li><a href="https://smacss.com/" target="_blank">SMACSS</a></li>
-                <li><a href="http://www.smashingmagazine.com/2013/10/21/challenging-css-best-practices-atomic-approach/" target="_blank">Atomic CSS</a></li>
-                <li><a href="http://www.slideshare.net/stubbornella/object-oriented-css" target="_blank">OOCSS</a></li>
+                <li><a href="https://bem.info/" target="_blank">BEM</a>
+                </li>
+                <li><a href="https://smacss.com/" target="_blank">SMACSS</a>
+                </li>
+                <li><a href="http://www.smashingmagazine.com/2013/10/21/challenging-css-best-practices-atomic-approach/" target="_blank">Atomic CSS</a>
+                </li>
+                <li><a href="http://www.slideshare.net/stubbornella/object-oriented-css" target="_blank">OOCSS</a>
+                </li>
             </ul>
         </slide-content>
         <slide-content>
+            <h1>BEM</h1>
+<code-prism language="css">/* Block */
+.nav { }
+
+/* Element */
+.nav__item { }
+
+/* Block with Modifier */
+.nav--hidden { }
+
+/* Element with Modifier */
+.nav__item--current { }</code-prism>
+        </slide-content>
+                <slide-content>
+            <h1>SMACSS</h1>
+<code-prism language="css">/* Module */
+.nav { }
+
+/* Module with State */
+.nav.is-current { }
+
+/* Module with Semantic Element Selector */
+.nav > h2 { }
+
+/* Layout Style */
+.l-inline { }</code-prism>
+        </slide-content>
+
+        <slide-content>
             <h1>Web Components</h1>
+            <blockquote>
+                Web Components usher in a <strong>new era</strong> of web development based on <strong>encapsulated and interoperable</strong> custom elements that extend HTML itself. <span class="attr">- <a href="https://www.polymer-project.org/" target="_blank">Polymer</a></span>
+            </blockquote>
+        </slide-content>
+        <slide-content>
+            <h1>Web Components APIs</h1>
             <h2>Custom Elements</h2>
             <h2>HTML Templates</h2>
             <h2>HTML Imports</h2>
@@ -48,18 +104,113 @@
         </slide-content>
         <slide-content>
             <h1>Custom Elements</h1>
+            <code-prism language="markup">
+&#x3C;my-element&#x3E;Hello World.&#x3C;/my-element&#x3E;
+            </code-prism>
+            <br>
+            <code-prism>
+var MyElement = document.registerElement('my-element', {
+  prototype: Object.create(HTMLElement.prototype)
+});
+            </code-prism>
+        </slide-content>
+        <slide-content>
+            <img src="http://media.giphy.com/media/VfkGlZD0hW4a4/giphy.gif" alt="Mind blown." class="gif" data-reset>
         </slide-content>
         <slide-content>
             <h1>HTML Templates</h1>
+        <code-prism language="markup">&lt;template id=&quot;my-template&quot;&gt;
+    &lt;p&gt;Hello World.&lt;/p&gt;
+    &lt;!-- This image won't be downloaded on page load --&gt;
+    &lt;img src=&quot;example.jpg&quot; alt=&quot;Example&quot;&gt;
+&lt;/template&gt;</code-prism>
+        <br>
+        <code-prism language="javascript">document.importNode(
+    document.getElementById('my-template').content,
+    true
+);
+</code-prism>
         </slide-content>
         <slide-content>
             <h1>HTML Imports</h1>
+            <code-prism language="markup">&lt;link rel=&quot;import&quot; href=&quot;/imports/my-component.html&quot;&gt;</code-prism>
+        </slide-content>
+        <slide-content>
+            <img src="http://media.giphy.com/media/13nrhrHHfJSgOA/giphy.gif" alt="Prepare to enter the shadow DOM" data-reset class="gif">
         </slide-content>
         <slide-content>
             <h1>Shadow DOM</h1>
+            <code-prism>// Create Shadow Root
+document.getElementById('my-element').createShadowRoot();
+// Access Shadow Root
+document.getElementById('my-element').shadowRoot;</code-prism>
         </slide-content>
         <slide-content>
-            <h1>What does this change?</h1>
+            <h1>User Agent Shadow DOM</h1>
+            <code-prism language="markup">&lt;video src=&quot;#&quot; controls width=&quot;30%&quot;&gt;&lt;/video&gt;</code-prism>
+            <br>
+            <div class="video-container">
+                <video src="#" controls width="30%"></video>
+            </div>
+        </slide-content>
+        <slide-content>
+            <h1>Shadow DOM</h1>
+            <div id="my-first-element"></div>
+            <p>Light DOM.</p>
+            <script>(function(){var s = document.getElementById('my-first-element').createShadowRoot();s.innerHTML += '<style>p { color: chartreuse; margin: 5px 0 5px 0;}</style>';s.innerHTML += '<p>Shadow DOM.</p>';}());</script>
+            <code-prism language="markup">&lt;div id="my-first-element"&gt;&lt;/div&gt;&lt;p&gt;Light DOM.&lt;/p&gt;</code-prism>
+            <br>
+            <code-prism>// Create Shadow Root
+var s = document.getElementById('my-first-element').createShadowRoot();
+// Add Styles and Text
+s.innerHTML += '&lt;style&gtp { color: chartreuse; margin: 5px 0 5px 0;}&lt;/style&gt';
+s.innerHTML += '&lt;p&gt;Shadow DOM.&lt;/p&gt;';</code-prism>
+        </slide-content>
+        <slide-content>
+            <h1>Content Insertion Points</h1>
+            <code-prism language="markup">&lt;div id="my-second-element"&gt;
+    &lt;content&gt;&lt;/content&gt;
+&lt;/div&gt;
+    </code-prism>
+        </slide-content>
+        <slide-content>
+            <h1>Shadow DOM and <code>&lt;content&gt;&lt;/content&gt;</code></h1>
+            <div id="my-second-element"><p>Hello!</p></div>
+            <script>(function(){var s = document.getElementById('my-second-element').createShadowRoot();s.innerHTML += '<style>p { color: crimson; margin: 5px 0 5px 0;}</style>';s.innerHTML += '<p>Shadow DOM Start.</p>';s.innerHTML += '<content></content>';s.innerHTML += '<p>Shadow DOM End.</p>';}());</script>
+            <code-prism language="markup">&lt;div id="my-second-element"&gt;&lt;p&gt;Hello!&lt;/p&gt;&lt;/div&gt;</code-prism>
+            <br>
+            <code-prism>var s = document.getElementById('my-second-element').createShadowRoot();
+s.innerHTML += '&lt;p&gt;Shadow DOM Start.&lt;/p&gt;';
+s.innerHTML += '&lt;style&gtp { color: crimson; margin: 5px 0 5px 0;}&lt;/style&gt';
+s.innerHTML += '&lt;content&gt;&lt;/content&gt;';
+s.innerHTML += '&lt;p&gt;Shadow DOM End.&lt;/p&gt;';</code-prism>
+        </slide-content>
+        <slide-content>
+            <h1>Crossing the Shadow Boundary</h1>
+            <h2 class="sub-title">Into the Light</h2>
+            <code-prism language="css">/* pseudo-class for host element*/
+:host { }
+/* functional pseudo-class for host if it matches the selector argument */
+:host() { }
+/* functional pseudo-class, for host context that matches selector argument */
+:host-context() { }
+/* pseudo-element, for distrubted notes rendered via a &lt;content&gt; element */
+::content { }</code-prism>
+        </slide-content>
+        <slide-content>
+            <h1>Crossing the Shadow Boundary</h1>
+            <h2 class="sub-title">Into the Dark</h2>
+            <code-prism language="css">/* pseudo-element for shadow roots */
+::shadow { }</code-prism>
+        </slide-content>
+        <slide-content>
+            <h1>Crossing the Shadow Boundary</h1>
+            <h2 class="sub-title">Ignore Boundaries</h2>
+            <code-prism language="css">/* combinator for selecting through shadow boundaries */
+body /deep/ p { }</code-prism>
+        </slide-content>
+        <slide-content>
+            <h1>Let's Write a Component</h1>
         </slide-content>
         <slide-content>
             <h1>Using Web Components</h1>

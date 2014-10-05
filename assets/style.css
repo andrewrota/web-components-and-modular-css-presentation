@@ -20,28 +20,47 @@ blockquote {
   border-left-width: 10px;
   border-left-style: solid;
   border-left-color: #edc951;
-  padding-left: 20px; }
+  padding-left: 20px;
+  text-shadow: 2px 5px 7px rgba(0, 0, 0, 0.3); }
   blockquote .attr {
     font-family: Arial, sans-serif;
-    font-size: 60%; }
+    font-size: 60%;
+    text-shadow: none; }
+  blockquote a {
+    color: #333333; }
+    blockquote a:hover {
+      color: #eeeeee; }
 
 code-prism {
-  font-size: 150%; }
+  font-size: 90%; }
 
 code-prism /deep/ pre {
   padding-top: 0 !important;
-  padding-bottom: 0 !important; }
+  padding-bottom: 0 !important;
+  width: 95%;
+  box-sizing: border-box;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  padding-left: 10px !important;
+  padding-right: 10px !important; }
 
 .gif {
   height: 90vh;
   margin: 0 auto;
+  padding-top: 25px;
+  padding-right: 25px;
+  box-sizing: border-box;
   width: 100%; }
+
+p {
+  margin: 5px 0 5px 0; }
 
 h1 {
   color: #cc333f;
   font-size: 225%;
   font-family: 'Ubuntu', Helvetica, Arial, sans-serif, sans-serif;
-  text-shadow: 2px 5px 10px rgba(255, 255, 255, 0.2); }
+  text-shadow: 2px 5px 10px rgba(255, 255, 255, 0.2);
+  margin-bottom: 10px; }
 
 ul {
   list-style-type: circle;
@@ -68,9 +87,16 @@ slide-content {
   position: absolute;
   top: 0;
   left: 0; }
-  slide-content .title-block {
-    margin-top: 40vh;
-    text-align: center; }
+
+slide-content .sub-title {
+  margin: 5px 0 10px 5px; }
+
+.title-slide {
+  padding-top: 30vh;
+  text-align: center;
+  padding-left: 0; }
+  .title-slide h2 {
+    margin-left: 0; }
 
 slide-show /deep/ .progress-bar {
   background-color: #edc951;
@@ -82,9 +108,16 @@ slide-show /deep/ .prev {
   border-right-color: #6a4a3c;
   z-index: 2; }
 
+.video-container {
+  text-align: center; }
+
 @media print {
   body {
     background: #00a0b0; }
+
+  .gif {
+    height: 6in;
+    display: block; }
 
   slide-show /deep/ .progress-bar {
     display: none; }
