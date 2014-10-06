@@ -24,8 +24,15 @@ body {
 a {
     color: $standardLight;
 }
-a:hover, a:active {
+a:hover, a:active, .link-as-text:hover, .link-as-text:active {
     background-color: lighten($tertiary, 10%);
+}
+.link-as-text {
+    color: $standardDark;
+    text-decoration: none;
+    &:hover {
+        color: $standardLight;
+    }
 }
 blockquote {
     font-family: 'Swanky and Moo Moo', cursive;

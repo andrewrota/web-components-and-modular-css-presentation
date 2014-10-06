@@ -11,8 +11,14 @@ body {
 a {
   color: #eeeeee; }
 
-a:hover, a:active {
+a:hover, a:active, .link-as-text:hover, .link-as-text:active {
   background-color: #f08d6f; }
+
+.link-as-text {
+  color: #333333;
+  text-decoration: none; }
+  .link-as-text:hover {
+    color: #eeeeee; }
 
 blockquote {
   font-family: 'Swanky and Moo Moo', cursive;
