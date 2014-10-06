@@ -60,7 +60,7 @@ code-prism /deep/ pre {
     padding-left: 10px !important;
     padding-right: 10px !important;
 }
-.gif {
+.full-page-image, .gif {
     height: 90vh;
     margin: 0 auto;
     padding-top: 25px;
@@ -135,6 +135,40 @@ slide-show {
     text-align: center;
 }
 
+.browser-table {
+    text-align: center;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, .2);
+    padding: 15px;
+    img {
+        width: 60px;
+    }
+    th {
+        font-size: 80%;
+    }
+    th, td {
+        width: 60px;
+        padding: 0 25px;
+        line-height: 1;
+        vertical-align: middle;
+    }
+    .yes, .no, .almost {
+        font-weight: bold;
+    }
+    .yes {
+        color: green;
+        text-shadow: 2px 5px 15px rgba(255, 255, 255, 1);
+    }
+    .almost {
+        color: goldenRod;
+        text-shadow: 2px 5px 15px rgba(255, 255, 255, 1);
+    }
+    .no {
+        color: crimson;
+        text-shadow: 2px 5px 15px rgba(0, 0, 0, .7);
+    }
+}
+
 @media print {
     body {
         background: $primary;
@@ -154,4 +188,3 @@ slide-show {
         position: static;
     }
 }
-

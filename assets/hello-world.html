@@ -1,0 +1,21 @@
+<template id="hw">
+    <style>
+        ::content strong { color: GreenYellow; }
+        p { margin: 2px 20px 2px 0; }
+        :host { border: 1px solid FireBrick; display: block; margin-right: 20px; }
+        .hello { color: Gold; }
+    </style>
+    <p><span class="hello">Hello world</span>, <content></content>.</p>
+</template>
+<script type="text/javascript">
+(function(window, undefined) {
+    var importedDoc = document.currentScript.ownerDocument;
+    var elementPrototype = Object.create(HTMLElement.prototype);
+    elementPrototype.createdCallback = function() {
+        var template = importedDoc.getElementById('hw').content;
+        var clone = document.importNode(template, true);
+        this.createShadowRoot().appendChild(clone);
+    };
+    document.registerElement('hello-world', {prototype: elementPrototype });
+}(window));
+</script>

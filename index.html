@@ -42,10 +42,6 @@
                 </ul>
         </slide-content>
         <slide-content>
-            <h1>UI Libraries</h1>
-            
-        </slide-content>
-        <slide-content>
             <img src="http://media.giphy.com/media/n7Kv7tLf2UzMk/giphy.gif" alt="Sad" class="gif" data-reset>
         </slide-content>
         <slide-content>
@@ -171,18 +167,17 @@ s.innerHTML += '&lt;p&gt;Shadow DOM.&lt;/p&gt;';</code-prism>
             <h1>Content Insertion Points</h1>
             <code-prism language="markup">&lt;div id="my-second-element"&gt;
     &lt;content&gt;&lt;/content&gt;
-&lt;/div&gt;
-    </code-prism>
+&lt;/div&gt;</code-prism>
         </slide-content>
         <slide-content>
             <h1>Shadow DOM and <code>&lt;content&gt;&lt;/content&gt;</code></h1>
             <div id="my-second-element"><p>Hello!</p></div>
-            <script>(function(){var s = document.getElementById('my-second-element').createShadowRoot();s.innerHTML += '<style>p { color: crimson; margin: 5px 0 5px 0;}</style>';s.innerHTML += '<p>Shadow DOM Start.</p>';s.innerHTML += '<content></content>';s.innerHTML += '<p>Shadow DOM End.</p>';}());</script>
+            <script>(function(){var s = document.getElementById('my-second-element').createShadowRoot();s.innerHTML += '<style>p { color: crimson; margin: 5px 0; }</style>';s.innerHTML += '<p>Shadow DOM Start.</p>';s.innerHTML += '<content></content>';s.innerHTML += '<p>Shadow DOM End.</p>';}());</script>
             <code-prism language="markup">&lt;div id="my-second-element"&gt;&lt;p&gt;Hello!&lt;/p&gt;&lt;/div&gt;</code-prism>
             <br>
             <code-prism>var s = document.getElementById('my-second-element').createShadowRoot();
 s.innerHTML += '&lt;p&gt;Shadow DOM Start.&lt;/p&gt;';
-s.innerHTML += '&lt;style&gtp { color: crimson; margin: 5px 0 5px 0;}&lt;/style&gt';
+s.innerHTML += '&lt;style&gtp { color: crimson; margin: 5px 0; }&lt;/style&gt';
 s.innerHTML += '&lt;content&gt;&lt;/content&gt;';
 s.innerHTML += '&lt;p&gt;Shadow DOM End.&lt;/p&gt;';</code-prism>
         </slide-content>
@@ -191,7 +186,7 @@ s.innerHTML += '&lt;p&gt;Shadow DOM End.&lt;/p&gt;';</code-prism>
             <h2 class="sub-title">Into the Light</h2>
             <code-prism language="css">/* pseudo-class for host element*/
 :host { }
-/* functional pseudo-class for host if it matches the selector argument */
+/* functional pseudo-class, for host if it matches the selector argument */
 :host() { }
 /* functional pseudo-class, for host context that matches selector argument */
 :host-context() { }
@@ -244,6 +239,57 @@ elementPrototype.createdCallback = function() {
   this.createShadowRoot().appendChild(clone);
 };
 document.registerElement('hello-world', {prototype: elementPrototype });</code-prism>
+        </slide-content>
+        <slide-content>
+            <h1>Can I use???</h1>
+            <table class="browser-table">
+                <tr>
+                    <th></th>
+                    <th>Custom Elements</th>
+                    <th>HTML Templates</th>
+                    <th>HTML Imports</th>
+                    <th>Shadow DOM</th>
+                </tr>
+                <tr>
+                    <td><img src="https://raw.githubusercontent.com/alrra/browser-logos/master/chrome/chrome_128x128.png"></img></td>
+                    <td class="yes">✅</td>
+                    <td class="yes">✅</td>
+                    <td class="yes">✅</td>
+                    <td class="yes">✅</td>
+                </tr>
+                <tr>
+                    <td><img src="https://raw.githubusercontent.com/alrra/browser-logos/master/opera/opera_128x128.png"></img></td>
+                    <td class="yes">✅</td>
+                    <td class="yes">✅</td>
+                    <td class="yes">✅</td>
+                    <td class="yes">✅</td>
+                </tr>
+                <tr>
+                    <td><img src="https://raw.githubusercontent.com/alrra/browser-logos/master/firefox/firefox_128x128.png"></img></td>
+                    <td class="almost">⚑</td>
+                    <td class="yes">✅</td>
+                    <td class="almost">⚑</td>
+                    <td class="almost">⚑</td>
+                </tr>
+                <tr>
+                    <td><img src="https://raw.githubusercontent.com/alrra/browser-logos/master/safari/safari_128x128.png"></img></img></td>
+                    <td class="no">X</td>
+                    <td class="yes">✅</td>
+                    <td class="no">X</td>
+                    <td class="no">X</td>
+                </tr>
+                <tr>
+                    <td><img src="https://raw.githubusercontent.com/alrra/browser-logos/master/internet-explorer/internet-explorer_128x128.png"></img></td>
+                    <td class="no">X</td>
+                    <td class="no">X</td>
+                    <td class="no">X</td>
+                    <td class="no">X</td>
+                </tr>
+            </table>
+            
+            
+            
+            
         </slide-content>
         <slide-content>
             <h1>Using Web Components</h1>

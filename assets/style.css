@@ -44,7 +44,7 @@ code-prism /deep/ pre {
   padding-left: 10px !important;
   padding-right: 10px !important; }
 
-.gif {
+.full-page-image, .gif {
   height: 90vh;
   margin: 0 auto;
   padding-top: 25px;
@@ -110,6 +110,32 @@ slide-show /deep/ .prev {
 
 .video-container {
   text-align: center; }
+
+.browser-table {
+  text-align: center;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 15px; }
+  .browser-table img {
+    width: 60px; }
+  .browser-table th {
+    font-size: 80%; }
+  .browser-table th, .browser-table td {
+    width: 60px;
+    padding: 0 25px;
+    line-height: 1;
+    vertical-align: middle; }
+  .browser-table .yes, .browser-table .no, .browser-table .almost {
+    font-weight: bold; }
+  .browser-table .yes {
+    color: green;
+    text-shadow: 2px 5px 15px white; }
+  .browser-table .almost {
+    color: goldenRod;
+    text-shadow: 2px 5px 15px white; }
+  .browser-table .no {
+    color: crimson;
+    text-shadow: 2px 5px 15px rgba(0, 0, 0, 0.7); }
 
 @media print {
   body {
