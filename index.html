@@ -6,7 +6,7 @@
     <link rel="import" href="bower_components/web-component-slides/dist/slide-content.html">
     <link rel="import" href="bower_components/web-component-slides/dist/slide-show.html">
     <link rel="import" href="bower_components/warpech-prism/code-prism.html">
-    <link href='//fonts.googleapis.com/css?family=Swanky+and+Moo+Moo|Francois+One|Roboto+Condensed:400,700|Ubuntu:400,700' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Swanky+and+Moo+Moo|Ubuntu:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="assets/style.css" type="text/css" />
     <link rel="import" href="assets/hello-world.html">
 </head>
@@ -182,8 +182,7 @@ s.innerHTML += '&lt;content&gt;&lt;/content&gt;';
 s.innerHTML += '&lt;p&gt;Shadow DOM End.&lt;/p&gt;';</code-prism>
         </slide-content>
         <slide-content>
-            <h1>Crossing the Shadow Boundary</h1>
-            <h2 class="sub-title">Into the Light</h2>
+            <h1>Into the Light</h1>
             <code-prism language="css">/* pseudo-class for host element*/
 :host { }
 /* functional pseudo-class, for host if it matches the selector argument */
@@ -194,21 +193,21 @@ s.innerHTML += '&lt;p&gt;Shadow DOM End.&lt;/p&gt;';</code-prism>
 ::content { }</code-prism>
         </slide-content>
         <slide-content>
-            <h1>Crossing the Shadow Boundary</h1>
-            <h2 class="sub-title">Into the Dark</h2>
+            <h1>Into the Dark</h1>
             <code-prism language="css">/* pseudo-element for shadow roots */
 ::shadow { }</code-prism>
-        </slide-content>
-        <slide-content>
-            <h1>Crossing the Shadow Boundary</h1>
-            <h2 class="sub-title">Ignore Boundaries</h2>
+            <br>
             <code-prism language="css">/* combinator for selecting through shadow boundaries */
 body /deep/ p { }</code-prism>
+            <blockquote>This is basically a super-descendant combinator.<br><span class="attr"><a href="http://dev.w3.org/csswg/css-scoping/#issue-250ee37f" target="_blank">- CSS Scoping Module Draft, Issue 6, referring to <code>/deep/</code></a></span></blockquote>
+            
         </slide-content>
         <slide-content>
             <h1>Let's Write a Component</h1>
             <hello-world>I am a <strong>web component</strong></hello-world>
             <h2 class="sub-title">The Markup</h2>
+            <code-prism language="markup">&lt;link rel=&quot;import&quot; href=&quot;assets/hello-world.html&quot;&gt;</code-prism>
+            <br>
             <code-prism language="markup">&lt;hello-world&gt;I am a &lt;strong&gt;web component&lt;/strong&gt;&lt;/hello-world&gt;</code-prism>
             <br>
         </slide-content>
@@ -287,9 +286,9 @@ document.registerElement('hello-world', {prototype: elementPrototype });</code-p
                 </tr>
             </table>
             
-            
-            
-            
+        </slide-content>
+        <slide-content>
+            <h1>Polyfills</h1>
         </slide-content>
         <slide-content>
             <h1>Using Web Components</h1>

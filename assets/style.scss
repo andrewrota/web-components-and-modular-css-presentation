@@ -49,6 +49,7 @@ blockquote {
     }
     a {
         color: $standardDark;
+        text-decoration: none;
         &:hover {
             color: $standardLight;
         }
@@ -176,8 +177,24 @@ slide-show {
     }
 }
 
+/* Small screens */
+@media screen and (max-width: 1000px) {
+    body {
+        font-size: 125%;
+    }
+    h1 {
+        margin-top: 5px !important;
+        font-size: 175% !important;
+    }
+    code-prism /deep/ code {
+        line-height: 1 !important;   
+    }
+}
+
+/* Print */
 @media print {
     body {
+        font-size: 160%;
         background: $primary;
     }
     .gif {
