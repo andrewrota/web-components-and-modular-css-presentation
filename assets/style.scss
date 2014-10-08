@@ -76,6 +76,13 @@ code-prism /deep/ pre {
     box-sizing: border-box;
     width: 100%;
 }
+.full-width-image {
+    padding-right: 5%;
+    margin-top: 25px;
+    box-sizing: border-box;
+    width: 100%;
+    
+}
 p {margin: 5px 0 5px 0; }
 h1 {
     color: $secondary;
@@ -115,6 +122,7 @@ slide-content {
 slide-content .sub-title {
     margin: 5px 0 10px 5px;
 }
+
 
 .title-slide {
     padding-top: 30vh;
@@ -160,23 +168,21 @@ slide-show {
         line-height: 1;
         vertical-align: middle;
     }
-    .yes, .no, .almost {
-        font-weight: bold;
-    }
-    .yes {
-        color: green;
-        text-shadow: 2px 5px 15px rgba(255, 255, 255, 1);
-    }
-    .almost {
-        color: goldenRod;
-        text-shadow: 2px 5px 15px rgba(255, 255, 255, 1);
-    }
-    .no {
-        color: crimson;
-        text-shadow: 2px 5px 15px rgba(0, 0, 0, .7);
-    }
 }
-
+.yes, .no, .almost {
+    font-weight: bold;
+}
+.yes {
+    color: green;
+    text-shadow: 2px 5px 15px rgba(255, 255, 255, 1);
+}
+.almost {
+    color: goldenRod;
+}
+.no {
+    color: crimson;
+    text-shadow: 2px 5px 15px rgba(0, 0, 0, .7);
+}
 /* Small screens */
 @media screen and (max-width: 1000px) {
     body {
