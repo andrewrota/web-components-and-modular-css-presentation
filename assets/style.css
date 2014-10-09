@@ -65,6 +65,67 @@ code-prism /deep/ pre {
   box-sizing: border-box;
   width: 100%; }
 
+google-map {
+  display: block;
+  height: 30vh;
+  width: 95%; }
+
+github-card {
+  float: left; }
+
+paper-progress {
+  height: 10px; }
+  paper-progress::shadow #activeProgress {
+    background-color: #eb6841; }
+  paper-progress::shadow #secondaryProgress {
+    background-color: #edc951; }
+
+paper-radio-button {
+  height: 10px; }
+  paper-radio-button::shadow #onRadio {
+    background-color: #edc951; }
+  paper-radio-button::shadow #ink {
+    color: #eb6841; }
+    paper-radio-button::shadow #ink[checked] {
+      color: #edc951; }
+  paper-radio-button::shadow #offRadio {
+    border-color: gray; }
+
+paper-tabs::shadow #selectionBar {
+  background-color: #eb6841; }
+
+paper-tab {
+  color: #eeeeee; }
+
+.ui-example {
+  width: 95%;
+  height: 4em;
+  padding: 20px; }
+
+.label {
+  float: left;
+  padding-right: 20px;
+  font-size: 80%;
+  vertical-align: middle;
+  line-height: 2em; }
+
+.center-heading {
+  text-align: center;
+  margin-top: 30vh !important; }
+
+.center-child {
+  text-align: center; }
+
+.half-width {
+  width: 20em; }
+
+.quarter-width-image {
+  width: 10em;
+  margin: 2em; }
+
+.large-list {
+  font-size: 200%; }
+
 p {
   margin: 5px 0 5px 0; }
 
@@ -123,6 +184,75 @@ slide-show /deep/ .prev {
 
 .video-container {
   text-align: center; }
+
+.library-logo {
+  width: 30.5vw;
+  margin: 1vw;
+  display: block;
+  float: left; }
+
+.rotate-15 {
+  transform: rotate(15deg); }
+
+.rotate-negative-15 {
+  transform: rotate(-15deg); }
+
+.rotate-10 {
+  transform: rotate(10deg); }
+
+.rotate-negative-10 {
+  transform: rotate(-10deg); }
+
+.rotate-20 {
+  transform: rotate(20deg); }
+
+.rotate-negative-20 {
+  transform: rotate(-20deg); }
+
+#topcoat-logo {
+  color: #464646;
+  letter-spacing: -3.90000009536743px;
+  text-align: left;
+  text-decoration: none solid #464646;
+  -webkit-column-rule-color: #464646;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-decorations-in-effect: none;
+  -webkit-text-emphasis-color: #464646;
+  -webkit-text-fill-color: #464646;
+  -webkit-text-stroke-color: #464646;
+  border: 0px none #464646;
+  font: normal normal 600 normal 60px/66px source-sans-pro, sans-serif;
+  outline: #464646 none 0px;
+  -webkit-border-after: 0px none #464646;
+  -webkit-border-before: 0px none #464646;
+  -webkit-border-end: 0px none #464646;
+  -webkit-border-start: 0px none #464646; }
+
+#pure-logo {
+  background: white;
+  display: block;
+  height: 5vh;
+  line-height: 5vh;
+  vertical-align: middle;
+  box-sizing: border-box;
+  color: #1f8dd6;
+  width: 25vw;
+  text-align: center;
+  text-decoration: none solid #1f8dd6;
+  -webkit-column-rule-color: #1f8dd6;
+  -webkit-locale: en;
+  perspective-origin: 357.5px 51px;
+  -webkit-perspective-origin: 357.5px 51px;
+  -webkit-text-emphasis-color: #1f8dd6;
+  -webkit-text-fill-color: #1f8dd6;
+  -webkit-text-stroke-color: #1f8dd6;
+  transform-origin: 357.5px 51px;
+  -webkit-transform-origin: 357.5px 51px;
+  font-weight: 100;
+  font-size: 120%;
+  font-family: omnes-pro, sans-serif;
+  margin: 0px;
+  outline: #1f8dd6 none 0px; }
 
 .browser-table {
   text-align: center;

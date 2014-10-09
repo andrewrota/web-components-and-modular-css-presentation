@@ -7,6 +7,12 @@
     <link rel="import" href="bower_components/web-component-slides/dist/slide-content.html">
     <link rel="import" href="bower_components/web-component-slides/dist/slide-show.html">
     <link rel="import" href="bower_components/warpech-prism/code-prism.html">
+    <link rel="import" href="bower_components/google-map/google-map.html">
+    <link rel="import" href="bower_components/github-card/webcomponent/github-card.html">
+    <link rel="import" href="bower_components/paper-progress/paper-progress.html">
+    <link rel="import" href="bower_components/paper-radio-button/paper-radio-button.html">
+    <link rel="import" href="bower_components/paper-radio-group/paper-radio-group.html">
+    <link rel="import" href="bower_components/paper-tabs/paper-tabs.html" />
     <link href='//fonts.googleapis.com/css?family=Swanky+and+Moo+Moo|Ubuntu:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="assets/style.css" type="text/css" />
     <link rel="import" href="assets/hello-world.html">
@@ -19,15 +25,18 @@
             <h2><a href="https://twitter.com/andrewrota" target="_blank" class="link-as-text">@AndrewRota</a> | CSS Dev Conf 2014</h2>
         </slide-content>
         <slide-content>
-            <h1>Modularity + CSS</h1>
-        </slide-content>
-        <slide-content>
-            <h1>CSS Modularity</h1>
-
+            <h1>Modularity</h1>
+            <div class="center-child"><img src="http://upload.wikimedia.org/wikipedia/commons/d/df/Jigsaw.png" alt="Puzzle" class="half-width" /></div>
         </slide-content>
         <slide-content>
             <h1>UI Libraries</h1>
-                <ul>
+                <img class="library-logo rotate-negative-15" src="http://getbootstrap.com/2.3.2/assets/img/bs-docs-twitter-github.png" />
+                <img class="library-logo library-logo-smaller rotate-10" src="assets/yeti-f5.png" />
+                <span class="library-logo rotate-negative-15" id="pure-logo">Pure</span>
+                <span class="library-logo rotate-20" id="topcoat-logo">Topcoat</span>
+                <img class="library-logo rotate-negative-15" src="http://upload.wikimedia.org/wikipedia/en/thumb/7/72/JQuery_UI_Logo.svg/559px-JQuery_UI_Logo.svg.png" />
+                <img class="library-logo rotate-negative-10 library-logo-smaller library-logo-small-margin" src="http://www.sencha.com/img/v2/logo.png"  />
+                <!--<ul>
                     <li><a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>
                     </li>
                     <li><a href="http://jqueryui.com/" target="_blank">jQuery UI</a>
@@ -40,14 +49,23 @@
                     </li>
                     <li>Yahoo's <a href="http://purecss.io/" target="_blank">Pure CSS</a>
                     </li>
-                </ul>
+                </ul>-->
+        </slide-content>
+        <slide-content>
+        <h1>CSS Features</h1>
+        <ul class="large-list">
+            <li><strike>Encapsulation</strike></li>
+            <li><strike>Scope</strike></li>
+            <li><strike>Interfaces</strike></li>
+            <li><strike>Modularity</strike></li>
+        </ul>
         </slide-content>
         <slide-content>
             <img src="http://media.giphy.com/media/n7Kv7tLf2UzMk/giphy.gif" alt="Sad" class="gif" data-reset>
         </slide-content>
         <slide-content>
             <h1>Modular CSS Patterns</h1>
-            <ul>
+            <ul class="large-list">
                 <li><a href="https://bem.info/" target="_blank">BEM</a>
                 </li>
                 <li><a href="https://smacss.com/" target="_blank">SMACSS</a>
@@ -172,7 +190,7 @@ s.innerHTML += '&lt;p&gt;Shadow DOM.&lt;/p&gt;';</code-prism>
 &lt;/div&gt;</code-prism>
         </slide-content>
         <slide-content>
-            <h1>Shadow DOM and <code>&lt;content&gt;&lt;/content&gt;</code></h1>
+            <h1>Shadow DOM and <code>&lt;content&gt;</code></h1>
             <div id="my-second-element"><p>Hello!</p></div>
             <script>(function(){var s = document.getElementById('my-second-element').createShadowRoot();s.innerHTML += '<style>p { color: crimson; margin: 5px 0; }</style>';s.innerHTML += '<p>Shadow DOM Start.</p>';s.innerHTML += '<content></content>';s.innerHTML += '<p>Shadow DOM End.</p>';}());</script>
             <code-prism language="markup">&lt;div id="my-second-element"&gt;&lt;p&gt;Hello!&lt;/p&gt;&lt;/div&gt;</code-prism>
@@ -201,7 +219,7 @@ s.innerHTML += '&lt;p&gt;Shadow DOM End.&lt;/p&gt;';</code-prism>
             <br>
             <code-prism language="css">/* combinator for selecting through shadow boundaries */
 body /deep/ p { }</code-prism>
-            <blockquote>This is basically a super-descendant combinator.<br><span class="attr"><a href="http://dev.w3.org/csswg/css-scoping/#issue-250ee37f" target="_blank">- CSS Scoping Module Draft, Issue 6, referring to <code>/deep/</code></a></span></blockquote>
+            <blockquote>[<code>/deep/</code>] is basically a super-descendant combinator.<br><span class="attr"><a href="http://dev.w3.org/csswg/css-scoping/#issue-250ee37f" target="_blank">- CSS Scoping Module Draft, Issue 6</a></span></blockquote>
             
         </slide-content>
         <slide-content>
@@ -291,9 +309,81 @@ document.registerElement('hello-world', {prototype: elementPrototype });</code-p
         </slide-content>
         <slide-content>
             <h1>Polyfills</h1>
+            <div class="center-child">
+                <img class="quarter-width-image" src="assets/x-tags.png" />
+                <img class="quarter-width-image" src="https://www.polymer-project.org/images/logos/p-logo.svg" />
+            </div>
         </slide-content>
         <slide-content>
-            <h1>Using Web Components</h1>
+            <h1>When To Use Web Components?</h1>
+            <h2>Third Party Widgets?</h2>
+            <h2>Third Party UI Libraries?</h2>
+            <h2>Internal UI Libraries?</h2>
+            <h2>Web Component All the Things!?</h2>
+        </slide-content>
+        <slide-content>
+            <h1>Third Party Widgets</h1>
+            <google-map latitude="29.954356" longitude="-90.067863"></google-map>
+            <br>
+            <code-prism language="markup">&lt;google-map
+    latitude=&quot;29.954356&quot;
+    longitude=&quot;-90.067863&quot;&gt;
+&lt;/google-map&gt;</code-prism>
+            <!--<github-card class="quarter-width-image" user="andrewrota"></github-card>-->
+        </slide-content>
+        <slide-content>
+            <h1>Third Party UI Libraries</h1>
+            <div class="ui-example">
+                <paper-radio-group selected="css">
+                  <paper-radio-button name="css" label="CSS"></paper-radio-button>
+                  <paper-radio-button name="html" label="HTML"></paper-radio-button>
+                  <paper-radio-button name="js" label="JS"></paper-radio-button>
+                </paper-radio-group>
+                <br>
+                <br>
+                <code-prism language="markup">&lt;paper-radio-group selected=&quot;css&quot;&gt;
+    &lt;paper-radio-button name=&quot;css&quot; label=&quot;CSS&quot;&gt;&lt;/paper-radio-button&gt;
+&lt;/paper-radio-group&gt;</code-prism>
+                
+            </div>
+            <br>
+            <br>
+            <div class="ui-example">
+                <paper-progress value="10" secondaryProgress="50"></paper-progress>
+            <br>
+            <br>
+            <code-prism language="markup">&lt;paper-progress
+    value=&quot;10&quot; secondaryProgress=&quot;50&quot;&gt;
+&lt;/paper-progress&gt;</code-prism>
+            </div>
+            
+        </slide-content>
+        <slide-content>
+            <h1>Internal UI Libraries</h1>
+            <code-prism language="markup">&lt;acme-corp--menu&gt;
+    &lt;acme-corp--menu-item&gt;Home&lt;/acme-corp--menu-item&gt;
+    &lt;acme-corp--menu-item selected&gt;About&lt;/acme-corp--menu-item&gt;
+    &lt;acme-corp--menu-item&gt;Contact Us&lt;/acme-corp--menu-item&gt;
+&lt;/acme-corp--menu&gt;
+
+&lt;acme-corp--login-form
+    ajax
+    url="login.php"&gt;
+&lt;/acme-corp--login-form&gt;</code-prism>
+        </slide-content>
+        <slide-content>
+            <h1>Web Component Everything??</h1>
+            <code-prism language="markup">&lt;acme-corp--app&gt;
+    &lt;acme-corp--menu&gt;&lt;/acme-corp--menu&gt;
+    &lt;acme-corp--content&gt;&lt;/acme-corp--content&gt;
+    &lt;acme-corp--footer&gt;&lt;/acme-corp--footer&gt;
+&lt;/acme-corp--app&gt;</code-prism>
+        </slide-content>
+        <slide-content>
+            <h1>Probably Not (and that's OK)</h1>
+            <blockquote>
+                I don't ever see us going all in on Custom Elements for every possible thing <small>...</small> Use native elements and controls when possible and supplement with custom elements. <br><span class="attr">- <a href="http://webcomponents.org/articles/interview-with-joshua-peek/" target="_blank">Joshua Peek, Github Programmer</a></span>
+            </blockquote>
         </slide-content>
         <slide-content>
             <h1>Best Practices</h1>
