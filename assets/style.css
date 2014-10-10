@@ -1,42 +1,37 @@
-/* Color palette inspired by designjunkee's Ocean Five
- * <http://www.colourlovers.com/palette/1473/Ocean_Five>
- * CC-BY-NC-SA
- */
 body {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  font-weight: 400;
   font-size: 185%;
   line-height: 1.2;
   color: #333333; }
 
 a {
-  color: #eeeeee; }
+  color: #eb6841;
+  display: inline-block;
+  -webkit-transition: all .2s ease-in-out; }
 
-a:hover, a:active, .link-as-text:hover, .link-as-text:active {
-  background-color: #f08d6f; }
+a:hover, a:active, a:focus, .link-as-text:hover, .link-as-text:active, .link-as-text:focus {
+  -webkit-transform: scale(1.1); }
 
 .link-as-text {
   color: #333333;
   text-decoration: none; }
-  .link-as-text:hover {
-    color: #eeeeee; }
 
 blockquote {
-  font-family: 'Swanky and Moo Moo', cursive;
+  font-family: 'Muli', Helvetica, sans-serif;
   font-size: 200%;
   border-left-width: 10px;
   border-left-style: solid;
-  border-left-color: #edc951;
-  padding-left: 20px;
-  text-shadow: 2px 5px 7px rgba(255, 255, 255, 0.3); }
+  border-left-color: #91d4d4;
+  padding-left: 20px; }
   blockquote .attr {
-    font-family: Arial, sans-serif;
     font-size: 60%;
     text-shadow: none; }
   blockquote a {
     color: #333333;
     text-decoration: none; }
-    blockquote a:hover {
-      color: #eeeeee; }
+    blockquote a:hover, blockquote a:active {
+      -webkit-transform: scale(1.05); }
 
 code-prism {
   font-size: 90%; }
@@ -65,6 +60,11 @@ code-prism /deep/ pre {
   box-sizing: border-box;
   width: 100%; }
 
+.half-column {
+  width: 50%;
+  box-sizing: border-box;
+  float: left; }
+
 google-map {
   display: block;
   height: 30vh;
@@ -78,16 +78,33 @@ paper-progress {
   paper-progress::shadow #activeProgress {
     background-color: #eb6841; }
   paper-progress::shadow #secondaryProgress {
-    background-color: #edc951; }
+    background-color: #91d4d4; }
+
+/* $primary: #ffffff; // white
+$secondary: #784880; // purple
+$tertiary: #EB6841; // orange
+$quaternary: lighten(#784880, 25%); // light purple
+$quinary: #91D4D4; // blue */
+paper-slider {
+  height: 15px;
+  width: 95%; }
+  paper-slider::shadow #sliderBar::shadow #activeProgress {
+    background-color: #91d4d4; }
+  paper-slider::shadow #sliderKnobInner {
+    background-color: #b68abd; }
+    paper-slider::shadow #sliderKnobInner::before {
+      background-color: #b68abd; }
+    paper-slider::shadow #sliderKnobInner::after {
+      color: #b68abd; }
 
 paper-radio-button {
   height: 10px; }
   paper-radio-button::shadow #onRadio {
-    background-color: #edc951; }
+    background-color: #91d4d4; }
   paper-radio-button::shadow #ink {
     color: #eb6841; }
     paper-radio-button::shadow #ink[checked] {
-      color: #edc951; }
+      color: #91d4d4; }
   paper-radio-button::shadow #offRadio {
     border-color: gray; }
 
@@ -119,21 +136,29 @@ paper-tab {
 .half-width {
   width: 20em; }
 
-.quarter-width-image {
+.quarter-width {
   width: 10em;
   margin: 2em; }
 
+.library-images {
+  max-width: 15%;
+  margin: 1em;
+  max-height: 25vh; }
+
 .large-list {
   font-size: 200%; }
+
+.medium-list {
+  font-size: 170%; }
 
 p {
   margin: 5px 0 5px 0; }
 
 h1 {
-  color: #cc333f;
+  color: #784880;
   font-size: 225%;
-  font-family: 'Ubuntu', Helvetica, Arial, sans-serif, sans-serif;
-  text-shadow: 2px 5px 10px rgba(255, 255, 255, 0.2);
+  font-weight: 300;
+  font-family: 'Lato', Helvetica, sans-serif;
   margin-bottom: 10px; }
 
 ul {
@@ -148,12 +173,17 @@ h2 {
   color: #333333;
   margin-left: 20px; }
 
+p {
+  margin-left: 20px; }
+  p a:hover {
+    -webkit-transform: scale(1.03); }
+
 .attr small {
   font-size: 50%;
   display: block; }
 
 slide-content {
-  background: #00a0b0;
+  background: white;
   box-sizing: border-box;
   padding-left: 25px;
   height: 100vh;
@@ -173,17 +203,24 @@ slide-content .sub-title {
     margin-left: 0; }
 
 slide-show /deep/ .progress-bar {
-  background-color: #edc951;
+  background-color: #91d4d4;
   /* Animation technique from Reveal.js <https://github.com/hakimel/reveal.js> */
   transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985); }
 slide-show /deep/ .next {
-  border-left-color: #6a4a3c; }
+  border-left-color: #b68abd; }
 slide-show /deep/ .prev {
-  border-right-color: #6a4a3c;
+  border-right-color: #b68abd;
   z-index: 2; }
 
 .video-container {
   text-align: center; }
+  .video-container video {
+    width: 40%; }
+
+.date-container {
+  text-align: center; }
+  .date-container input {
+    font-size: 150%; }
 
 .library-logo {
   width: 30.5vw;
@@ -257,7 +294,7 @@ slide-show /deep/ .prev {
 .browser-table {
   text-align: center;
   margin: 0 auto;
-  background: rgba(255, 255, 255, 0.2);
+  background: #F5F2F0;
   padding: 15px; }
   .browser-table img {
     width: 60px; }
@@ -274,14 +311,14 @@ slide-show /deep/ .prev {
 
 .yes {
   color: green;
-  text-shadow: 2px 5px 15px white; }
+  text-shadow: 0 1px 0 white; }
 
 .almost {
   color: goldenRod; }
 
 .no {
   color: crimson;
-  text-shadow: 2px 5px 15px rgba(0, 0, 0, 0.7); }
+  text-shadow: 0 1px 0 white; }
 
 /* Small screens */
 @media screen and (max-width: 1000px) {
@@ -298,7 +335,7 @@ slide-show /deep/ .prev {
 @media print {
   body {
     font-size: 160%;
-    background: #00a0b0; }
+    background: white; }
 
   .gif {
     height: 6in;

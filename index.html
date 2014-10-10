@@ -12,8 +12,9 @@
     <link rel="import" href="bower_components/paper-progress/paper-progress.html">
     <link rel="import" href="bower_components/paper-radio-button/paper-radio-button.html">
     <link rel="import" href="bower_components/paper-radio-group/paper-radio-group.html">
+    <link rel="import" href="bower_components/paper-slider/paper-slider.html">
     <link rel="import" href="bower_components/paper-tabs/paper-tabs.html" />
-    <link href='//fonts.googleapis.com/css?family=Swanky+and+Moo+Moo|Ubuntu:400,700' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Lato:100,300|Muli|Open+Sans' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="assets/style.css" type="text/css" />
     <link rel="import" href="assets/hello-world.html">
 </head>
@@ -30,12 +31,12 @@
         </slide-content>
         <slide-content>
             <h1>UI Libraries</h1>
-                <img class="library-logo rotate-negative-15" src="http://getbootstrap.com/2.3.2/assets/img/bs-docs-twitter-github.png" />
-                <img class="library-logo library-logo-smaller rotate-10" src="assets/yeti-f5.png" />
-                <span class="library-logo rotate-negative-15" id="pure-logo">Pure</span>
-                <span class="library-logo rotate-20" id="topcoat-logo">Topcoat</span>
-                <img class="library-logo rotate-negative-15" src="http://upload.wikimedia.org/wikipedia/en/thumb/7/72/JQuery_UI_Logo.svg/559px-JQuery_UI_Logo.svg.png" />
-                <img class="library-logo rotate-negative-10 library-logo-smaller library-logo-small-margin" src="http://www.sencha.com/img/v2/logo.png"  />
+                <img class="library-images" src="https://avatars3.githubusercontent.com/u/2918581?v=2&s=200" />
+                <img class="library-images" src="assets/yeti-f5.png" />
+                <br>
+                <img class="library-images" src="http://www.sencha.com/img/sencha-large.png"  />
+                <img class="library-images" src="http://upload.wikimedia.org/wikipedia/en/thumb/7/72/JQuery_UI_Logo.svg/559px-JQuery_UI_Logo.svg.png" />
+                
                 <!--<ul>
                     <li><a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>
                     </li>
@@ -53,28 +54,24 @@
         </slide-content>
         <slide-content>
         <h1>CSS Features</h1>
-        <ul class="large-list">
-            <li><strike>Encapsulation</strike></li>
-            <li><strike>Scope</strike></li>
-            <li><strike>Interfaces</strike></li>
-            <li><strike>Modularity</strike></li>
-        </ul>
+            <h2><strike>Encapsulation</strike></h2>
+            <h2><strike>Scope</strike></h2>
+            <h2><strike>Interfaces</strike></h2>
+            <h2><strike>Modularity</strike></h2>
         </slide-content>
         <slide-content>
             <img src="http://media.giphy.com/media/n7Kv7tLf2UzMk/giphy.gif" alt="Sad" class="gif" data-reset>
         </slide-content>
         <slide-content>
             <h1>Modular CSS Patterns</h1>
-            <ul class="large-list">
-                <li><a href="https://bem.info/" target="_blank">BEM</a>
-                </li>
-                <li><a href="https://smacss.com/" target="_blank">SMACSS</a>
-                </li>
-                <li><a href="http://www.smashingmagazine.com/2013/10/21/challenging-css-best-practices-atomic-approach/" target="_blank">Atomic CSS</a>
-                </li>
-                <li><a href="http://www.slideshare.net/stubbornella/object-oriented-css" target="_blank">OOCSS</a>
-                </li>
-            </ul>
+                <h2><a href="https://bem.info/" target="_blank">BEM</a>
+                </h2>
+                <h2><a href="https://smacss.com/" target="_blank">SMACSS</a>
+                </h2>
+                <h2><a href="http://www.smashingmagazine.com/2013/10/21/challenging-css-best-practices-atomic-approach/" target="_blank">Atomic CSS</a>
+                </h2>
+                <h2><a href="http://www.slideshare.net/stubbornella/object-oriented-css" target="_blank">OOCSS</a>
+                </h2>
         </slide-content>
         <slide-content>
             <h1>BEM</h1>
@@ -108,7 +105,7 @@
         <slide-content>
             <h1>Web Components</h1>
             <blockquote>
-                Web Components usher in a <strong>new era</strong> of web development based on <strong>encapsulated and interoperable</strong> custom elements that extend HTML itself. <span class="attr">- <a href="https://www.polymer-project.org/" target="_blank">Polymer</a></span>
+                Web Components usher in a <strong>new era</strong> of web development based on <strong>encapsulated and interoperable</strong> custom elements that extend HTML itself. <span class="attr"><a href="https://www.polymer-project.org/" target="_blank">- Polymer</a></span>
             </blockquote>
         </slide-content>
         <slide-content>
@@ -164,23 +161,31 @@ document.getElementById('my-element').shadowRoot;</code-prism>
         </slide-content>
         <slide-content>
             <h1>User Agent Shadow DOM</h1>
-            <code-prism language="markup">&lt;video src=&quot;#&quot; controls width=&quot;30%&quot;&gt;&lt;/video&gt;</code-prism>
+            <code-prism language="markup">&lt;video src=&quot;#&quot; controls&gt;&lt;/video&gt;</code-prism>
             <br>
             <div class="video-container">
-                <video src="#" controls width="30%"></video>
+                <video src="#" controls></video>
+            </div>
+        </slide-content>
+        <slide-content>
+            <h1>User Agent Shadow DOM</h1>
+            <code-prism language="markup">&lt;input type=&quot;date&quot;&gt;</code-prism>
+            <br>
+            <div class="date-container">
+                <input type="date">
             </div>
         </slide-content>
         <slide-content>
             <h1>Shadow DOM</h1>
             <div id="my-first-element"></div>
             <p>Light DOM.</p>
-            <script>(function(){var s = document.getElementById('my-first-element').createShadowRoot();s.innerHTML += '<style>p { color: chartreuse; margin: 5px 0 5px 0;}</style>';s.innerHTML += '<p>Shadow DOM.</p>';}());</script>
+            <script>(function(){var s = document.getElementById('my-first-element').createShadowRoot();s.innerHTML += '<style>p { color: crimson; margin: 5px 0 5px 0;}</style>';s.innerHTML += '<p>Shadow DOM.</p>';}());</script>
             <code-prism language="markup">&lt;div id="my-first-element"&gt;&lt;/div&gt;&lt;p&gt;Light DOM.&lt;/p&gt;</code-prism>
             <br>
             <code-prism>// Create Shadow Root
 var s = document.getElementById('my-first-element').createShadowRoot();
 // Add Styles and Text
-s.innerHTML += '&lt;style&gtp { color: chartreuse; margin: 5px 0 5px 0;}&lt;/style&gt';
+s.innerHTML += '&lt;style&gtp { color: crimson; margin: 5px 0 5px 0;}&lt;/style&gt';
 s.innerHTML += '&lt;p&gt;Shadow DOM.&lt;/p&gt;';</code-prism>
         </slide-content>
         <slide-content>
@@ -219,13 +224,13 @@ s.innerHTML += '&lt;p&gt;Shadow DOM End.&lt;/p&gt;';</code-prism>
             <br>
             <code-prism language="css">/* combinator for selecting through shadow boundaries */
 body /deep/ p { }</code-prism>
-            <blockquote>[<code>/deep/</code>] is basically a super-descendant combinator.<br><span class="attr"><a href="http://dev.w3.org/csswg/css-scoping/#issue-250ee37f" target="_blank">- CSS Scoping Module Draft, Issue 6</a></span></blockquote>
+            <blockquote>[<code>/deep/</code>] is basically a <strong>super-descendant</strong> combinator.<br><span class="attr"><a href="http://dev.w3.org/csswg/css-scoping/#issue-250ee37f" target="_blank">- CSS Scoping Module Draft, Issue 6</a></span></blockquote>
             
         </slide-content>
         <slide-content>
             <h1>Let's Write a Component</h1>
             <hello-world>I am a <strong>web component</strong></hello-world>
-            <h2 class="sub-title">The Markup</h2>
+            <!--<h2 class="sub-title">The Markup</h2>--><br>
             <code-prism language="markup">&lt;link rel=&quot;import&quot; href=&quot;assets/hello-world.html&quot;&gt;</code-prism>
             <br>
             <code-prism language="markup">&lt;hello-world&gt;I am a &lt;strong&gt;web component&lt;/strong&gt;&lt;/hello-world&gt;</code-prism>
@@ -234,13 +239,13 @@ body /deep/ p { }</code-prism>
         <slide-content>
             <h1>Let's Write a Component</h1>
             <hello-world>I am a <strong>web component</strong></hello-world>
-            <h2 class="sub-title">The Template</h2>
-            <code-prism language="markup">&lt;template id=&quot;hw-template&quot;&gt;
+            <!--<h2 class="sub-title">The Template</h2>--><br>
+            <code-prism language="markup">&lt;template id=&quot;hw&quot;&gt;
   &lt;style&gt;
-    ::content strong { color: GreenYellow; }
+    ::content strong { color: crimson; }
     p { margin: 2px 20px 2px 0; }
-    :host { border: 1px solid FireBrick; display: block; margin-right: 20px; }
-    .hello { color: Gold; }
+    :host { border: 1px solid FireBrick; display: block; margin-right: 20px; padding: 20px;}
+    .hello { color: #91D4D; }
   &lt;/style&gt;
   &lt;p&gt;&lt;span class=&quot;hello&quot;&gt;Hello world&lt;/span&gt;, &lt;content&gt;&lt;/content&gt;.&lt;/p&gt;
 &lt;/template&gt;</code-prism>
@@ -249,7 +254,7 @@ body /deep/ p { }</code-prism>
         <slide-content>
             <h1>Let's Write a Component</h1>
             <hello-world>I am a <strong>web component</strong></hello-world>
-            <h2 class="sub-title">The JavaScript</h2>
+            <!--<h2 class="sub-title">The JavaScript</h2>--><br>
             <code-prism>var importedDoc = document.currentScript.ownerDocument;
 var elementPrototype = Object.create(HTMLElement.prototype);
 elementPrototype.createdCallback = function() {
@@ -310,8 +315,8 @@ document.registerElement('hello-world', {prototype: elementPrototype });</code-p
         <slide-content>
             <h1>Polyfills</h1>
             <div class="center-child">
-                <img class="quarter-width-image" src="assets/x-tags.png" />
-                <img class="quarter-width-image" src="https://www.polymer-project.org/images/logos/p-logo.svg" />
+                <img class="quarter-width" src="assets/x-tags.png" />
+                <img class="quarter-width" src="https://www.polymer-project.org/images/logos/p-logo.svg" />
             </div>
         </slide-content>
         <slide-content>
@@ -321,7 +326,7 @@ document.registerElement('hello-world', {prototype: elementPrototype });</code-p
             <h2>Internal UI Libraries?</h2>
             <h2>Web Component All the Things!?</h2>
         </slide-content>
-        <slide-content>
+        <slide-content class="reset-maps">
             <h1>Third Party Widgets</h1>
             <google-map latitude="29.954356" longitude="-90.067863"></google-map>
             <br>
@@ -329,7 +334,7 @@ document.registerElement('hello-world', {prototype: elementPrototype });</code-p
     latitude=&quot;29.954356&quot;
     longitude=&quot;-90.067863&quot;&gt;
 &lt;/google-map&gt;</code-prism>
-            <!--<github-card class="quarter-width-image" user="andrewrota"></github-card>-->
+            <!--<github-card class="quarter-width" user="andrewrota"></github-card>-->
         </slide-content>
         <slide-content>
             <h1>Third Party UI Libraries</h1>
@@ -349,12 +354,10 @@ document.registerElement('hello-world', {prototype: elementPrototype });</code-p
             <br>
             <br>
             <div class="ui-example">
-                <paper-progress value="10" secondaryProgress="50"></paper-progress>
+                <paper-slider value="10"></paper-slider>
             <br>
             <br>
-            <code-prism language="markup">&lt;paper-progress
-    value=&quot;10&quot; secondaryProgress=&quot;50&quot;&gt;
-&lt;/paper-progress&gt;</code-prism>
+            <code-prism language="markup">&lt;paper-slider value=&quot;10&quot;&gt;&lt;/paper-slider&gt;</code-prism>
             </div>
             
         </slide-content>
@@ -382,20 +385,45 @@ document.registerElement('hello-world', {prototype: elementPrototype });</code-p
         <slide-content>
             <h1>Probably Not (and that's OK)</h1>
             <blockquote>
-                I don't ever see us going all in on Custom Elements for every possible thing <small>...</small> Use native elements and controls when possible and supplement with custom elements. <br><span class="attr">- <a href="http://webcomponents.org/articles/interview-with-joshua-peek/" target="_blank">Joshua Peek, Github Programmer</a></span>
+                I don't ever see us going all in on Custom Elements for every possible thing <small>...</small> <strong>Use native elements and controls when possible and supplement with custom elements</strong>. <br><span class="attr"><a href="http://webcomponents.org/articles/interview-with-joshua-peek/" target="_blank">- Joshua Peek, Github Programmer</a></span>
             </blockquote>
         </slide-content>
         <slide-content>
             <h1>Best Practices</h1>
+                <div class="half-column">
+                    <h2>Small</h2>
+                    <h2>Open for Extension</h2>
+                    <h2>Documented</h2>
+                </div>
+                <div class="half-column">
+                    <h2>Unit Tested</h2>
+                    <h2>Accessible</h2>
+                    <h2>Responsive</h2>
+                </div>
         </slide-content>
         <slide-content>
             <h1>Tooling</h1>
+            <img class="library-images" src="http://bower.io/img/bower-logo.png" />
+            <img class="library-images" src="http://gruntjs.com/img/grunt-logo.png" />
+            <img class="library-images" src="https://raw2.github.com/gulpjs/artwork/master/gulp-2x.png" />
+            <img class="library-images" src="http://yeoman.io/assets/img/yeoman-02.901d.png" />
+            <img class="library-images" src="https://raw.githubusercontent.com/alrra/browser-logos/master/chrome/chrome_256x256.png" /><br>
+            <img class="library-images" src="https://www.polymer-project.org/images/logos/p-logo.svg" />
+            <img class="library-images" src="assets/x-tags.png" />
+            <img class="library-images" src="http://sass-lang.com/assets/img/logos/logo-235e394c.png" />
+            <img class="library-images" src="http://lesscss.org/public/img/logo.png" />
         </slide-content>
         <slide-content>
             <h1>Component Driven Web</h1>
         </slide-content>
         <slide-content>
-            <h1>Community Driven Components</h1>
+            <h1>Thanks!</h1>
+            <h2>Resources</h2>
+            <ul>
+                <li><a href="http://webcomponents.org/" target="_blank">WebComponents.org</a></li>
+            </ul>
+            <h2>Colophon</h2>
+            <p>This presentation was built with Shadow DOM, HTML Templates, HTML Imports, and the Custom Elements <code>&lt;slide-show&gt;</code> and <code>&lt;slide-content&gt;</code> using <a href="https://github.com/andrewrota/web-component-slides" target="_blank">Web Component Slides</a>.</p>
         </slide-content>
     </slide-show>
     <script src="assets/script.js"></script>

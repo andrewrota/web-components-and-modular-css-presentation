@@ -2,56 +2,51 @@
 //font-family: 'Francois One', sans-serif;
 //font-family: 'Roboto Condensed', sans-serif;
 
-/* Color palette inspired by designjunkee's Ocean Five
- * <http://www.colourlovers.com/palette/1473/Ocean_Five>
- * CC-BY-NC-SA
- */
-$primary: #00A0B0; // blue
-$secondary: #CC333F; // red
+$primary: #ffffff; // white
+$secondary: #784880; // purple
 $tertiary: #EB6841; // orange
-$quaternary: #6A4A3C; // brown
-$quinary: #EDC951; // yellow
+$quaternary: lighten(#784880, 25%); // light purple
+$quinary: #91D4D4; // blue
 
 $standardDark: #333333; // dark gray
 $standardLight: #eeeeee; // off white
 
 body {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    //font-family: 'Muli', Helvetica, sans-serif;
+    font-family: 'Open Sans', Helvetica, sans-serif;
+    font-weight: 400;
     font-size: 185%;
     line-height: 1.2;
     color: $standardDark;
 }
 a {
-    color: $standardLight;
+    color: $tertiary;
+    display: inline-block;
+    -webkit-transition: all .2s ease-in-out;
 }
-a:hover, a:active, .link-as-text:hover, .link-as-text:active {
-    background-color: lighten($tertiary, 10%);
+a:hover, a:active, a:focus, .link-as-text:hover, .link-as-text:active, .link-as-text:focus {
+    -webkit-transform: scale(1.1);
 }
 .link-as-text {
     color: $standardDark;
     text-decoration: none;
-    &:hover {
-        color: $standardLight;
-    }
 }
 blockquote {
-    font-family: 'Swanky and Moo Moo', cursive;
+    font-family: 'Muli', Helvetica, sans-serif;
     font-size: 200%;
     border-left-width: 10px;
     border-left-style: solid;
     border-left-color: $quinary;
     padding-left: 20px;
-    text-shadow: 2px 5px 7px rgba(255, 255, 255, 0.3);
     .attr {
-        font-family: Arial, sans-serif;
         font-size: 60%;
         text-shadow: none;
     }
     a {
         color: $standardDark;
         text-decoration: none;
-        &:hover {
-            color: $standardLight;
+       &:hover, &:active {
+            -webkit-transform: scale(1.05);
         }
     }
 }
@@ -84,6 +79,12 @@ code-prism /deep/ pre {
     
 }
 
+.half-column {
+    width: 50%;
+    box-sizing: border-box;
+    float: left;
+}
+
 google-map {
     display: block;
     height: 30vh;
@@ -105,6 +106,32 @@ paper-progress {
         }
     }
 }
+
+/* $primary: #ffffff; // white
+$secondary: #784880; // purple
+$tertiary: #EB6841; // orange
+$quaternary: lighten(#784880, 25%); // light purple
+$quinary: #91D4D4; // blue */
+
+paper-slider {
+    height: 15px;
+    width: 95%;
+    &::shadow {
+        #sliderBar::shadow #activeProgress {
+            background-color: $quinary;
+        }
+        #sliderKnobInner {
+            background-color: $quaternary;
+            &::before {
+                background-color: $quaternary
+            }
+            &::after {
+                color: $quaternary;
+            }
+        }
+    }
+}
+
 
 paper-radio-button {
     height: 10px;
@@ -157,19 +184,33 @@ paper-tab {
 .half-width {
    width: 20em;
 }
-.quarter-width-image {
+.quarter-width {
    width: 10em;
    margin: 2em;
 }
+
+.library-images {
+   max-width: 15%;
+   margin: 1em;
+   max-height: 25vh;
+}
+
+
 .large-list {
     font-size: 200%;
+}
+.medium-list {
+    font-size: 170%;
 }
 p {margin: 5px 0 5px 0; }
 h1 {
     color: $secondary;
     font-size: 225%;
-    font-family: 'Ubuntu', Helvetica, Arial, sans-serif, sans-serif;
-    text-shadow: 2px 5px 10px rgba(255, 255, 255, 0.2);
+    font-weight: 300;
+    //font-family: 'Muli', Helvetica, sans-serif;
+    font-family: 'Lato', Helvetica, sans-serif;
+    //font-family: 'Droid-Sans', Helvetica, Arial, sans-serif;
+   // text-shadow: 0 2px 3px rgba(0, 0, 0, 0.6);
     margin-bottom: 10px;
 }
 ul {
@@ -183,6 +224,12 @@ li {
 h2 {
     color: $standardDark;
     margin-left: 20px;
+}
+p {
+    margin-left: 20px;
+    a:hover {
+        -webkit-transform: scale(1.03);
+    }
 }
 .attr small {
     font-size: 50%;
@@ -230,6 +277,16 @@ slide-show {
 
 .video-container {
     text-align: center;
+    video {
+        width: 40%;
+    }
+}
+
+.date-container {
+    text-align: center;
+    input {
+        font-size: 150%;
+    }
 }
 
 .library-logo {
@@ -318,7 +375,7 @@ slide-show {
 .browser-table {
     text-align: center;
     margin: 0 auto;
-    background: rgba(255, 255, 255, .2);
+    background: #F5F2F0;
     padding: 15px;
     img {
         width: 60px;
@@ -338,14 +395,14 @@ slide-show {
 }
 .yes {
     color: green;
-    text-shadow: 2px 5px 15px rgba(255, 255, 255, 1);
+    text-shadow: 0 1px 0 white;
 }
 .almost {
     color: goldenRod;
 }
 .no {
     color: crimson;
-    text-shadow: 2px 5px 15px rgba(0, 0, 0, .7);
+    text-shadow: 0 1px 0 white;
 }
 /* Small screens */
 @media screen and (max-width: 1000px) {
