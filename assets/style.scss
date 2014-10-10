@@ -31,6 +31,10 @@ a:hover, a:active, a:focus, .link-as-text:hover, .link-as-text:active, .link-as-
     color: $standardDark;
     text-decoration: none;
 }
+.image-link {
+    display: inline;
+    -webkit-transition: none;
+}
 blockquote {
     font-family: 'Muli', Helvetica, sans-serif;
     font-size: 200%;
@@ -114,7 +118,6 @@ $quaternary: lighten(#784880, 25%); // light purple
 $quinary: #91D4D4; // blue */
 
 paper-slider {
-    height: 15px;
     width: 95%;
     &::shadow {
         #sliderBar::shadow #activeProgress {
@@ -184,18 +187,35 @@ paper-tab {
 .half-width {
    width: 20em;
 }
+
+.almost-full-width {
+   width: 25em;
+}
+
 .quarter-width {
    width: 10em;
    margin: 2em;
 }
 
 .library-images {
-   max-width: 15%;
+   max-width: 14%;
    margin: 1em;
    max-height: 25vh;
 }
 
-
+.small-list {
+    font-size: 80%;
+    list-style: none;
+    padding-left: 0;
+    li {
+        &:before {
+            content: '- ';
+        }
+    }
+    a:hover {
+        -webkit-transform: scale(1.03)
+    }
+}
 .large-list {
     font-size: 200%;
 }
@@ -252,7 +272,7 @@ slide-content .sub-title {
 }
 
 
-.title-slide {
+.title-slide, .center-slide {
     padding-top: 30vh;
     text-align: center;
     padding-left: 0;
