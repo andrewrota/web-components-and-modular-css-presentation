@@ -27,6 +27,7 @@
     "firefox-logo": "https://raw.githubusercontent.com/alrra/browser-logos/master/firefox/firefox_128x128.png",
     "safari-logo": "https://raw.githubusercontent.com/alrra/browser-logos/master/safari/safari_128x128.png",
     "ie-logo": "https://raw.githubusercontent.com/alrra/browser-logos/master/internet-explorer/internet-explorer_128x128.png",
-    "polymer-logo": "https://www.polymer-project.org/images/logos/p-logo.svg"
+    "polymer-logo": "https://www.polymer-project.org/images/logos/p-logo.svg",
+    "sad-gif": "http://media.giphy.com/media/n7Kv7tLf2UzMk/giphy.gif"
   }
 }
