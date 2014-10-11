@@ -1,0 +1,14 @@
+{
+  "name": "twilight-zone-gif",
+  "_cacheHeaders": {
+    "ETag": "\"f0f445fe99dc0aec561da34d87d5261e\"",
+    "Last-Modified": "Sun, 25 May 2014 22:59:45 GMT",
+    "Content-Length": "595740",
+    "Content-Type": "image/gif"
+  },
+  "_release": "e-tag:f0f445fe9",
+  "main": "index.gif",
+  "_source": "http://media.giphy.com/media/13nrhrHHfJSgOA/giphy.gif",
+  "_target": "*",
+  "_originalSource": "http://media.giphy.com/media/13nrhrHHfJSgOA/giphy.gif"
+}

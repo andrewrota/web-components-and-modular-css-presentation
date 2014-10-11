@@ -1,0 +1,13 @@
+{
+  "name": "safari-logo",
+  "_cacheHeaders": {
+    "ETag": "\"e55bc52ec5726f4eb0bfc839b3512ad7dfc80d71\"",
+    "Content-Length": "25905",
+    "Content-Type": "image/png"
+  },
+  "_release": "e-tag:e55bc52ec",
+  "main": "index.png",
+  "_source": "https://raw.githubusercontent.com/alrra/browser-logos/master/safari/safari_128x128.png",
+  "_target": "*",
+  "_originalSource": "https://raw.githubusercontent.com/alrra/browser-logos/master/safari/safari_128x128.png"
+}

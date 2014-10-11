@@ -1,0 +1,14 @@
+{
+  "name": "puzzle",
+  "_cacheHeaders": {
+    "ETag": "1ce9675467cd5b36b97e4bf159c08ca7",
+    "Last-Modified": "Mon, 07 Oct 2013 08:59:45 GMT",
+    "Content-Length": "75131",
+    "Content-Type": "image/png"
+  },
+  "_release": "e-tag:1ce9675467",
+  "main": "index.png",
+  "_source": "http://upload.wikimedia.org/wikipedia/commons/d/df/Jigsaw.png",
+  "_target": "*",
+  "_originalSource": "http://upload.wikimedia.org/wikipedia/commons/d/df/Jigsaw.png"
+}
