@@ -18,6 +18,13 @@
     "warpech-prism": "git://github.com/andrewrota/warpech-prism.git#master",
     "web-component-slides": "git://github.com/andrewrota/web-component-slides.git#master",
     "google-map": "*",
-    "paper-elements": "Polymer/paper-elements#~0.4.2"
+    "paper-elements": "Polymer/paper-elements#~0.4.2",
+    "puzzle": "http://upload.wikimedia.org/wikipedia/commons/d/df/Jigsaw.png",
+    "twilight-zone-gif": "http://media.giphy.com/media/13nrhrHHfJSgOA/giphy.gif",
+    "chrome-logo": "https://raw.githubusercontent.com/alrra/browser-logos/master/chrome/chrome_128x128.png",
+    "opera-logo": "https://raw.githubusercontent.com/alrra/browser-logos/master/opera/opera_128x128.png",
+    "firefox-logo": "https://raw.githubusercontent.com/alrra/browser-logos/master/firefox/firefox_128x128.png",
+    "safari-logo": "https://raw.githubusercontent.com/alrra/browser-logos/master/safari/safari_128x128.png",
+    "ie-logo": "https://raw.githubusercontent.com/alrra/browser-logos/master/internet-explorer/internet-explorer_128x128.png"
   }
 }
