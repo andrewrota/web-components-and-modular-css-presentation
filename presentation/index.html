@@ -4,18 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <title>Web Components and Modular CSS</title>
-    <link rel="import" href="bower_components/web-component-slides/dist/slide-content.html">
-    <link rel="import" href="bower_components/web-component-slides/dist/slide-show.html">
-    <link rel="import" href="bower_components/warpech-prism/code-prism.html">
-    <link rel="import" href="bower_components/google-map/google-map.html">
-    <link rel="import" href="bower_components/paper-progress/paper-progress.html">
-    <link rel="import" href="bower_components/paper-radio-button/paper-radio-button.html">
-    <link rel="import" href="bower_components/paper-radio-group/paper-radio-group.html">
-    <link rel="import" href="bower_components/paper-slider/paper-slider.html">
-    <link rel="import" href="bower_components/paper-tabs/paper-tabs.html" />
+    <link rel="import" href="../bower_components/web-component-slides/dist/slide-content.html">
+    <link rel="import" href="../bower_components/web-component-slides/dist/slide-show.html">
+    <link rel="import" href="../bower_components/warpech-prism/code-prism.html">
+    <link rel="import" href="../bower_components/google-map/google-map.html">
+    <link rel="import" href="../bower_components/paper-progress/paper-progress.html">
+    <link rel="import" href="../bower_components/paper-radio-button/paper-radio-button.html">
+    <link rel="import" href="../bower_components/paper-radio-group/paper-radio-group.html">
+    <link rel="import" href="../bower_components/paper-slider/paper-slider.html">
+    <link rel="import" href="../bower_components/paper-tabs/paper-tabs.html" />
     <link href='//fonts.googleapis.com/css?family=Lato:100,300|Muli|Open+Sans' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="assets/style.css" type="text/css" />
-    <link rel="import" href="assets/hello-world.html">
+    <link rel="stylesheet" href="../assets/style.css" type="text/css" />
+    <link rel="import" href="../assets/hello-world.html">
 </head>
 
 <body>
@@ -26,20 +26,20 @@
         </slide-content>
         <slide-content>
             <h1>Modularity</h1>
-            <div class="center-child"><img src="bower_components/puzzle/index.png" alt="Puzzle" class="half-width" /></div>
+            <div class="center-child"><img src="../bower_components/puzzle/index.png" alt="Puzzle" class="half-width" /></div>
         </slide-content>
         <slide-content>
             <h1>UI Libraries</h1>
                 <div class="center-child">
-                    <a class="image-link" href="http://getbootstrap.com/" target="_blank"><img class="library-images" src="assets/bower.png" /></a>
-                    <a class="image-link" href="http://foundation.zurb.com/" target="_blank"><img class="library-images" src="assets/yeti-f5.png" /></a>
-                    <a class="image-link" href="http://jqueryui.com/" target="_blank"><img class="library-images" src="assets/jqueryui.png" /></a>
-                    <a class="image-link" href="http://www.telerik.com/kendo-ui" target="_blank"><img class="library-images" src="assets/kendoui.png" /></a>
+                    <a class="image-link" href="http://getbootstrap.com/" target="_blank"><img class="library-images" src="../assets/bower.png" /></a>
+                    <a class="image-link" href="http://foundation.zurb.com/" target="_blank"><img class="library-images" src="../assets/yeti-f5.png" /></a>
+                    <a class="image-link" href="http://jqueryui.com/" target="_blank"><img class="library-images" src="../assets/jqueryui.png" /></a>
+                    <a class="image-link" href="http://www.telerik.com/kendo-ui" target="_blank"><img class="library-images" src="../assets/kendoui.png" /></a>
                     <br>
-                    <a class="image-link" href="http://topcoat.io/" target="_blank"><img class="library-images" src="assets/topcoat.png" /></a>
-                    <a class="image-link" href="http://dojotoolkit.org/" target="_blank"><img src="assets/dojo.png" class="library-images"></a>
-                    <a class="image-link" href="http://www.sencha.com/products/extjs/" target="_blank"><img class="library-images" src="assets/sencha.png"  /></a>
-                    <a class="image-link" href="http://yuilibrary.com/" target="_blank"><img src="assets/yui.png" class="library-images"></a>
+                    <a class="image-link" href="http://topcoat.io/" target="_blank"><img class="library-images" src="../assets/topcoat.png" /></a>
+                    <a class="image-link" href="http://dojotoolkit.org/" target="_blank"><img src="../assets/dojo.png" class="library-images"></a>
+                    <a class="image-link" href="http://www.sencha.com/products/extjs/" target="_blank"><img class="library-images" src="../assets/sencha.png"  /></a>
+                    <a class="image-link" href="http://yuilibrary.com/" target="_blank"><img src="../assets/yui.png" class="library-images"></a>
                 </div>
         </slide-content>
         <slide-content>
@@ -50,7 +50,7 @@
             <h2><strike>Modularity</strike></h2>
         </slide-content>
         <slide-content>
-            <img src="http://media.giphy.com/media/n7Kv7tLf2UzMk/giphy.gif" alt="Sad" class="gif" data-reset>
+            <img src="../bower_components/sad-gif/index.png" alt="Sad" class="gif" data-reset>
         </slide-content>
         <slide-content>
             <h1>Modular CSS Patterns</h1>
@@ -134,7 +134,7 @@ var MyElement = document.registerElement('my-element', {
         <slide-content>
             <h1>HTML Imports</h1>
             <code-prism language="markup">&lt;link rel=&quot;import&quot; href=&quot;/imports/my-component.html&quot;&gt;</code-prism>
-            <img class="full-width-image" src="assets/html-imports.png">
+            <img class="full-width-image" src="../assets/html-imports.png">
         </slide-content>
         <slide-content>
             <img src="http://media.giphy.com/media/13nrhrHHfJSgOA/giphy.gif" alt="Prepare to enter the shadow DOM" data-reset class="gif">
@@ -218,7 +218,7 @@ body /deep/ p { }</code-prism>
             <h1>Let's Write a Component</h1>
             <hello-world>I am a <strong>web component</strong></hello-world>
             <!--<h2 class="sub-title">The Markup</h2>--><br>
-            <code-prism language="markup">&lt;link rel=&quot;import&quot; href=&quot;assets/hello-world.html&quot;&gt;</code-prism>
+            <code-prism language="markup">&lt;link rel=&quot;import&quot; href=&quot;../assets/hello-world.html&quot;&gt;</code-prism>
             <br>
             <code-prism language="markup">&lt;hello-world&gt;I am a &lt;strong&gt;web component&lt;/strong&gt;&lt;/hello-world&gt;</code-prism>
             <br>
@@ -262,35 +262,35 @@ document.registerElement('hello-world', {prototype: elementPrototype });</code-p
                     <th>Shadow DOM</th>
                 </tr>
                 <tr>
-                    <td><img src="bower_components/chrome-logo/index.png"></td>
+                    <td><img src="../bower_components/chrome-logo/index.png"></td>
                     <td class="yes">&#10003;</td>
                     <td class="yes">&#10003;</td>
                     <td class="yes">&#10003;</td>
                     <td class="yes">&#10003;</td>
                 </tr>
                 <tr>
-                    <td><img src="bower_components/opera-logo/index.png"></td>
+                    <td><img src="../bower_components/opera-logo/index.png"></td>
                     <td class="yes">&#10003;</td>
                     <td class="yes">&#10003;</td>
                     <td class="yes">&#10003;</td>
                     <td class="yes">&#10003;</td>
                 </tr>
                 <tr>
-                    <td><img src="bower_components/firefox-logo/index.png"></td>
+                    <td><img src="../bower_components/firefox-logo/index.png"></td>
                     <td class="almost">Flag</td>
                     <td class="yes">&#10003;</td>
                     <td class="almost">Flag</td>
                     <td class="almost">Flag</td>
                 </tr>
                 <tr>
-                    <td><img src="bower_components/safari-logo/index.png"></td>
+                    <td><img src="../bower_components/safari-logo/index.png"></td>
                     <td class="no">X</td>
                     <td class="yes">&#10003;</td>
                     <td class="no">X</td>
                     <td class="no">X</td>
                 </tr>
                 <tr>
-                    <td><img src="bower_components/ie-logo/index.png"></td>
+                    <td><img src="../bower_components/ie-logo/index.png"></td>
                     <td class="no">X</td>
                     <td class="no">X</td>
                     <td class="no">X</td>
@@ -302,8 +302,8 @@ document.registerElement('hello-world', {prototype: elementPrototype });</code-p
         <slide-content>
             <h1>Polyfills</h1>
             <div class="center-child">
-                <img class="quarter-width" src="assets/x-tags.png" />
-                <img class="quarter-width" src="bower_components/polymer-logo/index.svg" />
+                <img class="quarter-width" src="../assets/x-tags.png" />
+                <img class="quarter-width" src="../bower_components/polymer-logo/index.svg" />
             </div>
         </slide-content>
         <slide-content>
@@ -393,13 +393,13 @@ document.registerElement('hello-world', {prototype: elementPrototype });</code-p
                 <a class="image-link" href="https://developer.chrome.com/devtools" target="_blank"><img class="library-images" src="https://raw.githubusercontent.com/alrra/browser-logos/master/chrome/chrome_256x256.png" /></a>
                 <a class="image-link" href="http://gruntjs.com/" target="_blank"><img class="library-images" src="http://gruntjs.com/img/grunt-logo.png" /></a>
                 <a class="image-link" href="http://gulpjs.com/" target="_blank"><img class="library-images" src="https://raw2.github.com/gulpjs/artwork/master/gulp-2x.png" /></a>
-                <a class="image-link" href="http://yeoman.io/" target="_blank"><img class="library-images" src="http://yeoman.io/assets/img/yeoman-02.901d.png" /></a>
+                <a class="image-link" href="http://yeoman.io/" target="_blank"><img class="library-images" src="http://yeoman.io/../assets/img/yeoman-02.901d.png" /></a>
                 <a class="image-link" href="http://bower.io/" target="_blank"><img class="library-images" src="http://bower.io/img/bower-logo.png" /></a>
             <br>
-                <a class="image-link" href="http://sass-lang.com/" target="_blank"><img class="library-images" src="http://sass-lang.com/assets/img/logos/logo-235e394c.png" /></a>
+                <a class="image-link" href="http://sass-lang.com/" target="_blank"><img class="library-images" src="http://sass-lang.com/../assets/img/logos/logo-235e394c.png" /></a>
                 <a class="image-link" href="http://lesscss.org/" target="_blank"><img class="library-images" src="http://lesscss.org/public/img/logo.png" /></a>
                 <a class="image-link" href="https://www.polymer-project.org/" target="_blank"><img class="library-images" src="https://www.polymer-project.org/images/logos/p-logo.svg" /></a>
-                <a class="image-link" href="http://www.x-tags.org/" target="_blank"><img class="library-images" src="assets/x-tags.png" /></a>
+                <a class="image-link" href="http://www.x-tags.org/" target="_blank"><img class="library-images" src="../assets/x-tags.png" /></a>
             </div>
         </slide-content>
         <slide-content>
@@ -424,7 +424,7 @@ document.registerElement('hello-world', {prototype: elementPrototype });</code-p
             <p>This presentation was built with Shadow DOM, HTML Templates, HTML Imports, and the Custom Elements <code>&lt;slide-show&gt;</code> and <code>&lt;slide-content&gt;</code> using <a href="https://github.com/andrewrota/web-component-slides" target="_blank">Web Component Slides</a>.</p>
         </slide-content>
     </slide-show>
-    <script src="assets/script.js"></script>
+    <script src="../assets/script.js"></script>
 </body>
 
 </html>
