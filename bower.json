@@ -15,10 +15,9 @@
   ],
   "private": true,
   "dependencies": {
-    "warpech-prism": "git@github.com:andrewrota/warpech-prism.git#master",
-    "web-component-slides": "git@github.com:andrewrota/web-component-slides.git#master",
+    "warpech-prism": "git://github.com/andrewrota/warpech-prism.git#master",
+    "web-component-slides": "git://github.com/andrewrota/web-component-slides.git#master",
     "google-map": "*",
-    "github-card": "git@github.com:pazguille/github-card.git",
     "paper-elements": "Polymer/paper-elements#~0.4.2"
   }
 }
