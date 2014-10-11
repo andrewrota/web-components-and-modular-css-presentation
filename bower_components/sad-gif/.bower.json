@@ -1,0 +1,14 @@
+{
+  "name": "sad-gif",
+  "_cacheHeaders": {
+    "ETag": "\"e127e973cb1b9c1ad951ebeb8d6bc86a\"",
+    "Last-Modified": "Wed, 02 Jul 2014 23:32:53 GMT",
+    "Content-Length": "1044224",
+    "Content-Type": "image/gif"
+  },
+  "_release": "e-tag:e127e973c",
+  "main": "index.gif",
+  "_source": "http://media.giphy.com/media/n7Kv7tLf2UzMk/giphy.gif",
+  "_target": "*",
+  "_originalSource": "http://media.giphy.com/media/n7Kv7tLf2UzMk/giphy.gif"
+}
