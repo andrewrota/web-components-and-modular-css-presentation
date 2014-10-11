@@ -30,5 +30,5 @@
   },
   "_source": "git://github.com/LeaVerou/prism.git",
   "_target": "gh-pages",
-  "_originalSource": "prism"
+  "_originalSource": "git://github.com/LeaVerou/prism.git"
 }
