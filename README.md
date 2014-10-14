@@ -5,7 +5,7 @@ Presentation for CSS Dev Conf 2014
 
 ## View
 
-This presentation can be viewed with Chrome 36+ [online](http://andrewrota.github.io/web-components-and-modular-css-presentation/presentation/index.html#0).  Alternatively, you can view the static version of the presentation on [SlideShare](https://www.slideshare.net/secret/LmJ4bl8tvkC6VP) or download the PDF in `./presentation/index.pdf`.
+This presentation can be viewed with Chrome 36+ [online](http://andrewrota.github.io/web-components-and-modular-css-presentation/presentation/index.html#0).  Alternatively, you can view the static version of the presentation on [SlideShare](http://www.slideshare.net/andrewrota/web-components-and-modular-css).
 
 
 ## Build
