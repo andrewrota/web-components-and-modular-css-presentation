@@ -13,6 +13,7 @@
     <link rel="import" href="../bower_components/paper-radio-group/paper-radio-group.html">
     <link rel="import" href="../bower_components/paper-slider/paper-slider.html">
     <link rel="import" href="../bower_components/paper-tabs/paper-tabs.html" />
+    <link rel="import" href="../bower_components/paper-input/paper-input.html">
     <link href='//fonts.googleapis.com/css?family=Lato:100,300|Muli|Open+Sans' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="../assets/style.css" type="text/css" />
     <link rel="import" href="../assets/hello-world.html">
@@ -23,6 +24,7 @@
         <slide-content class="title-slide">
             <h1>Web Components and Modular CSS</h1>
             <h2><a href="https://twitter.com/andrewrota" target="_blank" class="link-as-text">@AndrewRota</a> | CSS Dev Conf 2014</h2>
+            <h2>#components</h2>
         </slide-content>
         <slide-content>
             <h1>Modularity</h1>
@@ -105,6 +107,14 @@
             <h2>HTML Imports</h2>
             <h2>Shadow DOM</h2>
         </slide-content>
+        
+        <slide-content>
+            <h1>Web Components APIs</h1>
+            <h2><strong>Custom Elements</strong></h2>
+            <h2>HTML Templates</h2>
+            <h2>HTML Imports</h2>
+            <h2>Shadow DOM</h2>
+        </slide-content>
         <slide-content>
             <h1>Custom Elements</h1>
             <code-prism language="markup">
@@ -116,6 +126,13 @@ var MyElement = document.registerElement('my-element', {
   prototype: Object.create(HTMLElement.prototype)
 });
             </code-prism>
+        </slide-content>
+        <slide-content>
+            <h1>Web Components APIs</h1>
+            <h2>Custom Elements</h2>
+            <h2><strong>HTML Templates</strong></h2>
+            <h2>HTML Imports</h2>
+            <h2>Shadow DOM</h2>
         </slide-content>
         <slide-content>
             <h1>HTML Templates</h1>
@@ -132,9 +149,23 @@ var MyElement = document.registerElement('my-element', {
 </code-prism>
         </slide-content>
         <slide-content>
+            <h1>Web Components APIs</h1>
+            <h2>Custom Elements</h2>
+            <h2>HTML Templates</h2>
+            <h2><strong>HTML Imports</strong></h2>
+            <h2>Shadow DOM</h2>
+        </slide-content>
+        <slide-content>
             <h1>HTML Imports</h1>
             <code-prism language="markup">&lt;link rel=&quot;import&quot; href=&quot;/imports/my-component.html&quot;&gt;</code-prism>
             <img class="full-width-image" src="../assets/html-imports.png">
+        </slide-content>
+        <slide-content>
+            <h1>Web Components APIs</h1>
+            <h2>Custom Elements</h2>
+            <h2>HTML Templates</h2>
+            <h2>HTML Imports</h2>
+            <h2><strong>Shadow DOM</strong></h2>
         </slide-content>
         <slide-content>
             <img src="http://media.giphy.com/media/13nrhrHHfJSgOA/giphy.gif" alt="Prepare to enter the shadow DOM" data-reset class="gif">
@@ -194,12 +225,27 @@ s.innerHTML += '&lt;content&gt;&lt;/content&gt;';
 s.innerHTML += '&lt;p&gt;Shadow DOM End.&lt;/p&gt;';</code-prism>
         </slide-content>
         <slide-content>
+            <h1>Multiple <code>&lt;content&gt;</code> Elements</h1>
+            <div id="my-third-element"><span class="name">CSS Dev Conf</span><span class="greeting">Hello</span></div>
+            <script>(function(){var s = document.getElementById('my-third-element').createShadowRoot();s.innerHTML += '<content select=".greeting"></content>, '; s.innerHTML += '<content select=".name"></content>!';}());</script>
+            <br>
+            <code-prism language="markup">&lt;div id=&quot;my-third-element&quot;&gt;
+  &lt;span class=&quot;name&quot;&gt;CSS Dev Conf&lt;/span&gt;
+  &lt;span class=&quot;greeting&quot;&gt;Hello&lt;/span&gt;
+&lt;/div&gt;</code-prism>
+            <br>
+            <code-prism>var s = document.getElementById('my-third-element').createShadowRoot();
+s.innerHTML += '&lt;content select=".greeting"&gt;&lt;/content&gt;, ';
+s.innerHTML += '&lt;content select=".name"&gt;&lt;/content&gt;!';
+            </code-prism>
+        </slide-content>
+        <slide-content>
             <h1>Into the Light</h1>
             <code-prism language="css">/* pseudo-class for host element*/
 :host { }
 /* functional pseudo-class, for host if it matches the selector argument */
 :host() { }
-/* functional pseudo-class, for host context that matches selector argument */
+/* functional pseudo-class, for host node with parent that matches selector argument */
 :host-context() { }
 /* pseudo-element, for distributed notes rendered via a &lt;content&gt; element */
 ::content { }</code-prism>
@@ -348,25 +394,79 @@ document.registerElement('hello-world', {prototype: elementPrototype });</code-p
             
         </slide-content>
         <slide-content>
+        </slide-content>
+        <slide-content>
+            <h1>Third Party UI Libraries</h1>
+            <paper-input label="Type something here." required="" error="This is a required field." layout="" vertical="" class="invalid"></paper-input>
+            <code-prism language="markup">&lt;paper-input
+  label=&quot;Type something here.&quot;
+  required
+  error=&quot;This is a required field.&quot;
+  layout=&quot;&quot;
+  vertical=&quot;&quot;
+  class=&quot;invalid&quot;
+&gt;&lt;/paper-input&gt;</code-prism>
+            <br>
+        </slide-content>
+        <slide-content>
+        <h1>Styling UI Libraries</h1>
+            <code-prism language="css">paper-slider {
+  width: 95%;
+}
+paper-slider::shadow #sliderBar::shadow #activeProgress {
+  background-color: #91D4D4;
+}
+paper-slider::shadow #sliderKnobInner {
+  background-color: #b68abd;
+}
+paper-slider::shadow #sliderKnobInner::before {
+  background-color: #b68abd;
+}
+paper-slider::shadow #sliderKnobInner::after {
+  color: #b68abd;
+}
+</code-prism>
+        </slide-content>
+        <slide-content>
+        <h1>Styling UI Libraries (Sass)</h1>
+            <code-prism language="css">paper-slider {
+  width: 95%;
+  &::shadow {
+    #sliderBar::shadow #activeProgress {
+      background-color: $quinary;
+    }
+    #sliderKnobInner {
+      background-color: $quaternary;
+      &::before {
+        background-color: $quaternary
+      }
+      &::after {
+        color: $quaternary;
+      }
+    }
+  }
+}</code-prism>
+        </slide-content>
+        <slide-content>
             <h1>Internal UI Libraries</h1>
-            <code-prism language="markup">&lt;acme-corp--menu&gt;
-    &lt;acme-corp--menu-item&gt;Home&lt;/acme-corp--menu-item&gt;
-    &lt;acme-corp--menu-item selected&gt;About&lt;/acme-corp--menu-item&gt;
-    &lt;acme-corp--menu-item&gt;Contact Us&lt;/acme-corp--menu-item&gt;
-&lt;/acme-corp--menu&gt;
+            <code-prism language="markup">&lt;cssdevconf-menu&gt;
+    &lt;cssdevconf-menu-item&gt;Home&lt;/cssdevconf-menu-item&gt;
+    &lt;cssdevconf-menu-item selected&gt;About&lt;/cssdevconf-menu-item&gt;
+    &lt;cssdevconf-menu-item&gt;Contact Us&lt;/cssdevconf-menu-item&gt;
+&lt;/cssdevconf-menu&gt;
 
-&lt;acme-corp--login-form
+&lt;cssdevconf-login-form
     ajax
     url="login.php"&gt;
-&lt;/acme-corp--login-form&gt;</code-prism>
+&lt;/cssdevconf-login-form&gt;</code-prism>
         </slide-content>
         <slide-content>
             <h1>Web Component Everything??</h1>
-            <code-prism language="markup">&lt;acme-corp--app&gt;
-    &lt;acme-corp--menu&gt;&lt;/acme-corp--menu&gt;
-    &lt;acme-corp--content&gt;&lt;/acme-corp--content&gt;
-    &lt;acme-corp--footer&gt;&lt;/acme-corp--footer&gt;
-&lt;/acme-corp--app&gt;</code-prism>
+            <code-prism language="markup">&lt;cssdevconf-app&gt;
+    &lt;cssdevconf-menu&gt;&lt;/cssdevconf-menu&gt;
+    &lt;cssdevconf-content&gt;&lt;/cssdevconf-content&gt;
+    &lt;cssdevconf-footer&gt;&lt;/cssdevconf-footer&gt;
+&lt;/cssdevconf-app&gt;</code-prism>
         </slide-content>
         <slide-content>
             <h1>Probably Not (and that's OK)</h1>
@@ -397,7 +497,6 @@ document.registerElement('hello-world', {prototype: elementPrototype });</code-p
                 <a class="image-link" href="http://bower.io/" target="_blank"><img class="library-images" src="http://bower.io/img/bower-logo.png" /></a>
             <br>
                 <a class="image-link" href="http://sass-lang.com/" target="_blank"><img class="library-images" src="http://sass-lang.com/../assets/img/logos/logo-235e394c.png" /></a>
-                <a class="image-link" href="http://lesscss.org/" target="_blank"><img class="library-images" src="http://lesscss.org/public/img/logo.png" /></a>
                 <a class="image-link" href="https://www.polymer-project.org/" target="_blank"><img class="library-images" src="https://www.polymer-project.org/images/logos/p-logo.svg" /></a>
                 <a class="image-link" href="http://www.x-tags.org/" target="_blank"><img class="library-images" src="../assets/x-tags.png" /></a>
             </div>
@@ -422,6 +521,11 @@ document.registerElement('hello-world', {prototype: elementPrototype });</code-p
             </ul>
             <h2>Colophon</h2>
             <p>This presentation was built with Shadow DOM, HTML Templates, HTML Imports, and the Custom Elements <code>&lt;slide-show&gt;</code> and <code>&lt;slide-content&gt;</code> using <a href="https://github.com/andrewrota/web-component-slides" target="_blank">Web Component Slides</a>.</p>
+        </slide-content>
+        <slide-content class="center-slide">
+            <h1>Remember to Vote: 504-229-6828</h1>
+            <h2>#components 5 Web components are awesome!</h2>
+            <h2>#components 1 Terrible talk, I hate web components.</h2>
         </slide-content>
     </slide-show>
     <script src="../assets/script.js"></script>
