@@ -117,6 +117,14 @@ paper-tabs::shadow #selectionBar {
 paper-tab {
   color: #eeeeee; }
 
+paper-input {
+  width: 90%; }
+  paper-input /deep/ .cursor, paper-input /deep/ .focused-underline {
+    background-color: #784880; }
+
+paper-input {
+  width: 90%; }
+
 .ui-example {
   width: 95%;
   height: 4em;
@@ -187,6 +195,9 @@ li {
 h2 {
   color: #333333;
   margin-left: 20px; }
+
+h2 strong {
+  text-decoration: underline; }
 
 p {
   margin-left: 20px; }
